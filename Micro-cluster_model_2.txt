@@ -30,7 +30,6 @@ docker run hello-world (requires sudo)
 
 cd ../
 
-docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t nsimakov/slurm_vc:slurm-20.02-sim .
 docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t molguin/slurm_vc:slurm-21-08-sim .
 
 cd micro2
