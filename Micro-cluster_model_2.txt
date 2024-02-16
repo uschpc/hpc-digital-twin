@@ -1,0 +1,47 @@
+#### Micro-cluster Model 2 ###
+
+cd /scratchlocal
+
+git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+
+cd slurm_model/micro2
+
+vim docker-compose.yml
+
+vim SlurmVC_SimRepo.Dockerfile
+# install dependencies
+# add users
+# copy daemons starters
+# configure sshd
+# setup munge
+# configure mysqld
+# install mini miniapps
+# setup entry point
+# install slurm
+# install slurm_sim_tools
+# copy cluster configs
+# prepere directory layout
+
+sudo su
+
+systemctl start docker (requires sudo)
+
+docker run hello-world (requires sudo)
+
+cd ../
+
+docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t nsimakov/slurm_vc:slurm-20.02-sim .
+docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t molguin/slurm_vc:slurm-21-08-sim .
+
+cd micro2
+
+docker compose up -d
+
+docker exec -it micro2-headnode-1 /opt/slurm_sim_tools/src/slurmsimtools/run_slurm.py -s /opt/slurm -e /opt/cluster/micro2/etc \
+            -t /opt/cluster/micro2/job_traces/jobs500_shrinked.events \
+            -r /root/results/jobs500_shrinked/dtstart_10_1 -a /opt/cluster/micro2/utils/sacctmgr.script \
+            -d -v -dtstart 10 --no-slurmd
+
+docker compose stop
+
+docker compose rm -f -s -v
