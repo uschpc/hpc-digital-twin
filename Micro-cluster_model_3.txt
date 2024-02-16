@@ -1,0 +1,63 @@
+#### Micro-cluster Model 3 ###
+
+cd /scratchlocal
+
+git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+
+cd slurm_model/micro2
+
+vim docker-compose.yml
+
+vim SlurmVC_SimRepo.Dockerfile
+# install dependencies
+# add users
+# copy daemons starters
+# configure sshd
+# setup munge
+# configure mysqld
+# install mini miniapps
+# setup entry point
+# install slurm
+# install slurm_sim_tools
+# copy cluster configs
+# prepere directory layout
+
+sudo su
+
+systemctl start docker (requires sudo)
+
+docker run hello-world (requires sudo)
+
+cd ../
+
+docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t nsimakov/slurm_vc:slurm-20.02-sim .
+docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t molguin/slurm_vc:slurm-21-08-sim .
+
+cd micro2
+
+docker compose up -d
+
+workload=small
+dtstart=10
+replica=1
+
+docker exec -it micro2-headnode-1 bash
+
+cd /opt
+
+git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+
+vim /opt/slurm_model/micro3/etc/slurm.conf
+#AccountingStoreFlags=job_comment
+
+Ctrl+D (exit micro2-headnode-1 container)
+
+docker exec micro2-headnode-1 /opt/slurm_sim_tools/src/slurmsimtools/run_slurm.py \
+            -s /opt/slurm -e /opt/slurm_model/micro3/etc             \
+            -a /opt/slurm_model/micro3/vctools/sacctmgr.script \
+            -t /opt/slurm_model/micro3/job_traces/${workload}.events \
+            -r /root/results/test/${workload}_dtstart_${dtstart}_${replica} -d -v -dtstart $dtstart --no-slurmd >& ${workload}_dtstart_${dtstart}_${replica}.out
+
+docker compose stop
+
+docker compose rm -f -s -v
