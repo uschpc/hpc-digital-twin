@@ -1,0 +1,46 @@
+Step to generate data
+
+# Collect sacct data
+
+## all jobs
+```
+sacct --starttime 10/01/23 --endtime 10/31/23 --format=User,JobID,Submit,Start,End,Timelimit%12,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P
+
+```
+## Or had -r option if you want to look at partition(s) 
+```
+sacct --starttime 10/01/23 --endtime 10/31/23  molguin --format=User,JobID,Submit,Start,End,Timelimit%12,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P -r epyc-64
+```
+
+save stdout to "slurm_sacct_epyc64_10days" for example
+
+# Anonymize data
+
+```
+./anonymize.sh
+```
+
+## set $log_file and $anon_file names appropriately
+
+# format log data into "events" style format
+
+```
+./job_data_to_events.awk > events_bag.txt
+```
+
+# Generate events from events_bag.txt
+Randomly select N=500 events from `events_bag.txt`
+
+```
+python3 event_generate.py
+```
+
+This step can be run multiple times to recreate multiple simulations with similar configurations
+
+
+You should then have an event file
+
+# Generate 'user.sim' file
+
+After creating anonymized job log from sacct run `generate_users_sim.sh`. Creates associations of users and accounts based on initial sacct data.
+
