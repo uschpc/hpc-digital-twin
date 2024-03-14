@@ -44,3 +44,11 @@ You should then have an event file
 
 After creating anonymized job log from sacct run `generate_users_sim.sh`. Creates associations of users and accounts based on initial sacct data.
 
+# Adding users to virtual slurm cluster
+
+## Add linux user accounts
+./add_system_users.sh
+
+## Add slurm accounts
+./sacctmgr_script_maker.awk users.sim > sacctmgr.script
+
