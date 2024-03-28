@@ -1,0 +1,45 @@
+#### Epyc Cluster ###
+# Process needs to be streamlined
+
+cd /scratchlocal
+
+git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+
+mkdir slurm_model/epyc
+
+
+# Prepare docker image
+
+docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t carc/slurm_vc:slurm-21-08-sim .
+
+cd slurm_model/epyc
+
+cp -r $HPC_DIGITAL_TWIN/sim_configs/* .
+
+
+$HPC_DIGITAL_TWIN/sim_configs/utilities/directory_maker.sh
+
+docker compose up -d
+
+docker exec -it epyc64-headnode-1 bash
+
+## inside headnode container
+
+cd /opt/slurm/etc/vctools
+./add_system_users.sh
+
+exit
+
+mv epyc500.events etc
+
+docker exec -it epyc64-headnode-1 /opt/slurm_sim_tools/src/slurmsimtools/run_slurm.py \
+-s /opt/slurm \
+-e /opt/slurm/etc/ \
+-a /opt/slurm/etc/vctools/sacctmgr.script \
+-t /opt/slurm/etc/epyc500.events \
+-r /root/results/test/epyc500_dtstart_30 \
+-d -v -dtstart 30 --no-slurmd
+
+docker compose stop
+
+docker compose rm -f -s -v

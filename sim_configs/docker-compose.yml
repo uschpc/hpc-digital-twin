@@ -1,0 +1,132 @@
+version: "3.3"
+services: 
+  headnode: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: headnode
+    shm_size: 64M
+    command: ["sshd", "munged", "mysqld", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.172
+    volumes: 
+      - './results/headnode:/root/results'
+      - './etc:/opt/slurm/etc'
+  e1: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e1
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.11
+    volumes: 
+      - './results/e1:/root/results'
+      - './etc:/opt/slurm/etc'
+  e2: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e2
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.2
+    volumes: 
+      - './results/e2:/root/results'
+      - './etc:/opt/slurm/etc'
+  e3: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e3
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.3
+    volumes: 
+      - './results/e3:/root/results'
+      - './etc:/opt/slurm/etc'
+  e4: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e4
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.4
+    volumes: 
+      - './results/e4:/root/results'
+      - './etc:/opt/slurm/etc'
+  e5: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e5
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.5
+    volumes: 
+      - './results/e5:/root/results'
+      - './etc:/opt/slurm/etc'
+  e6: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e6
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.6
+    volumes: 
+      - './results/e6:/root/results'
+      - './etc:/opt/slurm/etc'
+  e7: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e7
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.7
+    volumes: 
+      - './results/e7:/root/results'
+      - './etc:/opt/slurm/etc'
+  e8: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e8
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.8
+    volumes: 
+      - './results/e8:/root/results'
+      - './etc:/opt/slurm/etc'
+  e9: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e9
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.9
+    volumes: 
+      - './results/e9:/root/results'
+      - './etc:/opt/slurm/etc'
+  e10: 
+    image: carc/slurm_vc:slurm-20.02-sim
+    hostname: e10
+    shm_size: 64M
+    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
+    networks: 
+      network1:  
+        ipv4_address: 172.32.3.10
+    volumes: 
+      - './results/e10:/root/results'
+      - './etc:/opt/slurm/etc'
+
+networks: 
+  network1: 
+    driver: bridge
+    ipam: 
+      driver: default
+      config:
+        - subnet: 172.32.3.0/24
+          gateway: 172.32.3.1
