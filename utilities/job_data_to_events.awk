@@ -21,7 +21,7 @@ NR > 1 { submit_time=slurm_time_convert($3)
         job_start_time=slurm_time_convert($4)
         job_end_time=slurm_time_convert($5)
         job_duration=time_diff(job_end_time,job_start_time) # time in seconds
-        printf("-dt %s -e submit_batch_job | --uid=%s -jid=%s, -sim-walltime %s ",submit_diff,$1,NR-1,job_duration) 
+        printf("-dt %s -e submit_batch_job | --uid=%s  -sim-walltime %s ",submit_diff,$1,job_duration) 
         printf("-t %s -n %s -N %s -A %s -p %s -q %s --mem=%s pseudo.job\n",$6,$7,$8,$9,$10,$11,$12)
         last_job_submit=submit_time
         }

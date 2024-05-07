@@ -1,5 +1,5 @@
 outfile="docker-compose.yml"
-n_compute=10
+n_compute=171
 image_name="carc/slurm_vc:slurm-20.02-sim"
 
 preamble="""version: "3.3"\nservices: \n"""
@@ -13,9 +13,16 @@ node_string="""  {hostname}:
     networks: 
       network1:  
         ipv4_address: {ip_address}
+    expose: 
+      - '6817'
+      - '6818'
+      - '6819'
     volumes: 
       - './results/{hostname}:/root/results'
       - './etc:/opt/slurm/etc'
+      - './results/home:/home'
+      - './results/{hostname}/var/spool/slurm:/var/spool/slurm'
+      - './results/{hostname}/var/state/:/var/state'
 """
 networkstring="""
 networks: 
