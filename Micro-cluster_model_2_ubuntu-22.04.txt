@@ -1,0 +1,49 @@
+#### Ubuntu Micro-cluster Model 2 ###
+
+# instantiate a ubuntu-22.04 VM on artemis
+
+# install the docker engine according to the following instructions:
+# Link: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+cd /scratchlocal
+
+git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+
+cd slurm_model
+
+mv .dockerignore .dockerignore_bkp-1
+
+sudo su
+
+systemctl start docker
+
+docker pull centos:7
+
+docker build -f ./micro2/SlurmVC_SimRepo.Dockerfile -t carc/slurm_vc:slurm-20.02-sim .
+
+cd micro2
+
+docker compose up -d
+
+docker exec -it micro2-headnode-1 bash
+
+cd /opt
+
+mv slurm_sim_tools slurm_sim_tools_bkp-1
+
+git clone https://github.com/ubccr-slurm-simulator/slurm_sim_tools.git
+
+exit
+
+docker exec -it micro2-headnode-1 /opt/slurm_sim_tools/src/slurmsimtools/run_slurm.py -s /opt/slurm -e /opt/cluster/micro2/etc \
+            -t /opt/cluster/micro2/job_traces/jobs500_shrinked.events \
+            -r /root/results/jobs500_shrinked/dtstart_10_1 -a /opt/cluster/micro2/utils/sacctmgr.script \
+            -d -v -dtstart 10 --no-slurmd
+
+docker compose stop
+
+docker compose rm -f -s -v
+
+docker compose down
+
+docker rm -f $(docker ps -a -q)
