@@ -4,6 +4,7 @@
 
 # install the docker engine according to the following instructions:
 # Link: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+# Look for the section "Install using the apt repository" and there are three steps to follow
 
 cd /scratchlocal
 
