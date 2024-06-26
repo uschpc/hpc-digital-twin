@@ -9,93 +9,335 @@ add cluster Name=micro Fairshare=1 QOS=normal,supporters
 add user name=admin DefaultAccount=account0 MaxSubmitJobs=1000 AdminLevel=Administrator
 
 
-add account name=account0 Fairshare=100
-add user name=user1 DefaultAccount=account0 MaxSubmitJobs=1000
-
-add account name=account11 Fairshare=100
-add user name=user10 DefaultAccount=account11 MaxSubmitJobs=1000
-
-add account name=account28 Fairshare=100
-add user name=user11 DefaultAccount=account28 MaxSubmitJobs=1000
-
-add account name=account18 Fairshare=100
-add user name=user12 DefaultAccount=account18 MaxSubmitJobs=1000
-
-add account name=account6 Fairshare=100
-add user name=user13 DefaultAccount=account6 MaxSubmitJobs=1000
-
-add account name=account15 Fairshare=100
-add user name=user14 DefaultAccount=account15 MaxSubmitJobs=1000
-
-add account name=account14 Fairshare=100
-add user name=user15 DefaultAccount=account14 MaxSubmitJobs=1000
-
-add account name=account26 Fairshare=100
-add user name=user16 DefaultAccount=account26 MaxSubmitJobs=1000
-
-add account name=account9 Fairshare=100
-add user name=user17 DefaultAccount=account9 MaxSubmitJobs=1000
-
-add account name=account2 Fairshare=100
-add user name=user18 DefaultAccount=account2 MaxSubmitJobs=1000
+add account name=account78 Fairshare=100
+add user name=user1 DefaultAccount=account78 MaxSubmitJobs=1000
 
 add account name=account7 Fairshare=100
-add user name=user19 DefaultAccount=account7 MaxSubmitJobs=1000
+add user name=user10 DefaultAccount=account7 MaxSubmitJobs=1000
 
-add account name=account8 Fairshare=100
-add user name=user2 DefaultAccount=account8 MaxSubmitJobs=1000
+add account name=account68 Fairshare=100
+add user name=user100 DefaultAccount=account68 MaxSubmitJobs=1000
 
-add account name=account19 Fairshare=100
-add user name=user20 DefaultAccount=account19 MaxSubmitJobs=1000
+add account name=account80 Fairshare=100
+add user name=user101 DefaultAccount=account80 MaxSubmitJobs=1000
 
-add account name=account5 Fairshare=100
-add user name=user21 DefaultAccount=account5 MaxSubmitJobs=1000
-
-add account name=account4 Fairshare=100
-add user name=user22 DefaultAccount=account4 MaxSubmitJobs=1000
-
-add account name=account17 Fairshare=100
-add user name=user23 DefaultAccount=account17 MaxSubmitJobs=1000
-
-add account name=account23 Fairshare=100
-add user name=user24 DefaultAccount=account23 MaxSubmitJobs=1000
-
-add account name=account3 Fairshare=100
-add user name=user25 DefaultAccount=account3 MaxSubmitJobs=1000
-
-add account name=account27 Fairshare=100
-add user name=user26 DefaultAccount=account27 MaxSubmitJobs=1000
-
-add account name=account16 Fairshare=100
-add user name=user27 DefaultAccount=account16 MaxSubmitJobs=1000
-
-add account name=account29 Fairshare=100
-add user name=user28 DefaultAccount=account29 MaxSubmitJobs=1000
-
-add account name=account10 Fairshare=100
-add user name=user29 DefaultAccount=account10 MaxSubmitJobs=1000
-add user name=user3 DefaultAccount=account15 MaxSubmitJobs=1000
+add account name=account86 Fairshare=100
+add user name=user102 DefaultAccount=account86 MaxSubmitJobs=1000
 
 add account name=account24 Fairshare=100
-add user name=user30 DefaultAccount=account24 MaxSubmitJobs=1000
+add user name=user103 DefaultAccount=account24 MaxSubmitJobs=1000
 
-add account name=account22 Fairshare=100
-add user name=user4 DefaultAccount=account22 MaxSubmitJobs=1000
+add account name=account45 Fairshare=100
+add user name=user104 DefaultAccount=account45 MaxSubmitJobs=1000
 
-add account name=account12 Fairshare=100
-add user name=user5 DefaultAccount=account12 MaxSubmitJobs=1000
+add account name=account69 Fairshare=100
+add user name=user104 DefaultAccount=account69 MaxSubmitJobs=1000
 
-add account name=account21 Fairshare=100
-add user name=user6 DefaultAccount=account21 MaxSubmitJobs=1000
+add account name=account84 Fairshare=100
+add user name=user105 DefaultAccount=account84 MaxSubmitJobs=1000
 
-add account name=account13 Fairshare=100
-add user name=user7 DefaultAccount=account13 MaxSubmitJobs=1000
+add account name=account73 Fairshare=100
+add user name=user106 DefaultAccount=account73 MaxSubmitJobs=1000
+
+add account name=account92 Fairshare=100
+add user name=user107 DefaultAccount=account92 MaxSubmitJobs=1000
+
+add account name=account96 Fairshare=100
+add user name=user108 DefaultAccount=account96 MaxSubmitJobs=1000
+
+add account name=account90 Fairshare=100
+add user name=user109 DefaultAccount=account90 MaxSubmitJobs=1000
+
+add account name=account70 Fairshare=100
+add user name=user11 DefaultAccount=account70 MaxSubmitJobs=1000
+
+add account name=account53 Fairshare=100
+add user name=user110 DefaultAccount=account53 MaxSubmitJobs=1000
+
+add account name=account91 Fairshare=100
+add user name=user111 DefaultAccount=account91 MaxSubmitJobs=1000
+add user name=user112 DefaultAccount=account86 MaxSubmitJobs=1000
+
+add account name=account10 Fairshare=100
+add user name=user113 DefaultAccount=account10 MaxSubmitJobs=1000
+
+add account name=account27 Fairshare=100
+add user name=user114 DefaultAccount=account27 MaxSubmitJobs=1000
+
+add account name=account33 Fairshare=100
+add user name=user115 DefaultAccount=account33 MaxSubmitJobs=1000
+
+add account name=account52 Fairshare=100
+add user name=user116 DefaultAccount=account52 MaxSubmitJobs=1000
+
+add account name=account5 Fairshare=100
+add user name=user117 DefaultAccount=account5 MaxSubmitJobs=1000
+
+add account name=account82 Fairshare=100
+add user name=user118 DefaultAccount=account82 MaxSubmitJobs=1000
+
+add account name=account75 Fairshare=100
+add user name=user119 DefaultAccount=account75 MaxSubmitJobs=1000
+
+add account name=account28 Fairshare=100
+add user name=user12 DefaultAccount=account28 MaxSubmitJobs=1000
+add user name=user120 DefaultAccount=account45 MaxSubmitJobs=1000
+add user name=user121 DefaultAccount=account7 MaxSubmitJobs=1000
+add user name=user122 DefaultAccount=account73 MaxSubmitJobs=1000
+
+add account name=account42 Fairshare=100
+add user name=user123 DefaultAccount=account42 MaxSubmitJobs=1000
+add user name=user124 DefaultAccount=account84 MaxSubmitJobs=1000
+add user name=user125 DefaultAccount=account5 MaxSubmitJobs=1000
+
+add account name=account8 Fairshare=100
+add user name=user13 DefaultAccount=account8 MaxSubmitJobs=1000
+
+add account name=account66 Fairshare=100
+add user name=user14 DefaultAccount=account66 MaxSubmitJobs=1000
+
+add account name=account89 Fairshare=100
+add user name=user15 DefaultAccount=account89 MaxSubmitJobs=1000
+add user name=user16 DefaultAccount=account73 MaxSubmitJobs=1000
+add user name=user17 DefaultAccount=account73 MaxSubmitJobs=1000
 
 add account name=account20 Fairshare=100
-add user name=user8 DefaultAccount=account20 MaxSubmitJobs=1000
+add user name=user18 DefaultAccount=account20 MaxSubmitJobs=1000
+
+add account name=account36 Fairshare=100
+add user name=user19 DefaultAccount=account36 MaxSubmitJobs=1000
+
+add account name=account0 Fairshare=100
+add user name=user2 DefaultAccount=account0 MaxSubmitJobs=1000
+
+add account name=account88 Fairshare=100
+add user name=user20 DefaultAccount=account88 MaxSubmitJobs=1000
+
+add account name=account9 Fairshare=100
+add user name=user21 DefaultAccount=account9 MaxSubmitJobs=1000
+
+add account name=account35 Fairshare=100
+add user name=user22 DefaultAccount=account35 MaxSubmitJobs=1000
+add user name=user23 DefaultAccount=account36 MaxSubmitJobs=1000
+
+add account name=account44 Fairshare=100
+add user name=user23 DefaultAccount=account44 MaxSubmitJobs=1000
+
+add account name=account71 Fairshare=100
+add user name=user24 DefaultAccount=account71 MaxSubmitJobs=1000
+
+add account name=account11 Fairshare=100
+add user name=user25 DefaultAccount=account11 MaxSubmitJobs=1000
+
+add account name=account74 Fairshare=100
+add user name=user25 DefaultAccount=account74 MaxSubmitJobs=1000
+
+add account name=account76 Fairshare=100
+add user name=user26 DefaultAccount=account76 MaxSubmitJobs=1000
+
+add account name=account29 Fairshare=100
+add user name=user27 DefaultAccount=account29 MaxSubmitJobs=1000
+add user name=user28 DefaultAccount=account80 MaxSubmitJobs=1000
+add user name=user29 DefaultAccount=account44 MaxSubmitJobs=1000
+add user name=user29 DefaultAccount=account45 MaxSubmitJobs=1000
+add user name=user3 DefaultAccount=account5 MaxSubmitJobs=1000
+
+add account name=account59 Fairshare=100
+add user name=user30 DefaultAccount=account59 MaxSubmitJobs=1000
+
+add account name=account16 Fairshare=100
+add user name=user31 DefaultAccount=account16 MaxSubmitJobs=1000
+
+add account name=account85 Fairshare=100
+add user name=user32 DefaultAccount=account85 MaxSubmitJobs=1000
+add user name=user33 DefaultAccount=account10 MaxSubmitJobs=1000
+
+add account name=account19 Fairshare=100
+add user name=user34 DefaultAccount=account19 MaxSubmitJobs=1000
+
+add account name=account34 Fairshare=100
+add user name=user34 DefaultAccount=account34 MaxSubmitJobs=1000
+add user name=user35 DefaultAccount=account44 MaxSubmitJobs=1000
+
+add account name=account30 Fairshare=100
+add user name=user36 DefaultAccount=account30 MaxSubmitJobs=1000
 
 add account name=account25 Fairshare=100
-add user name=user9 DefaultAccount=account25 MaxSubmitJobs=1000
+add user name=user37 DefaultAccount=account25 MaxSubmitJobs=1000
+
+add account name=account3 Fairshare=100
+add user name=user38 DefaultAccount=account3 MaxSubmitJobs=1000
+add user name=user39 DefaultAccount=account73 MaxSubmitJobs=1000
+add user name=user4 DefaultAccount=account20 MaxSubmitJobs=1000
+add user name=user40 DefaultAccount=account9 MaxSubmitJobs=1000
+add user name=user41 DefaultAccount=account29 MaxSubmitJobs=1000
+
+add account name=account56 Fairshare=100
+add user name=user42 DefaultAccount=account56 MaxSubmitJobs=1000
+
+add account name=account37 Fairshare=100
+add user name=user43 DefaultAccount=account37 MaxSubmitJobs=1000
+
+add account name=account95 Fairshare=100
+add user name=user44 DefaultAccount=account95 MaxSubmitJobs=1000
+
+add account name=account51 Fairshare=100
+add user name=user45 DefaultAccount=account51 MaxSubmitJobs=1000
+add user name=user46 DefaultAccount=account84 MaxSubmitJobs=1000
+
+add account name=account60 Fairshare=100
+add user name=user47 DefaultAccount=account60 MaxSubmitJobs=1000
+add user name=user48 DefaultAccount=account59 MaxSubmitJobs=1000
+add user name=user49 DefaultAccount=account88 MaxSubmitJobs=1000
+
+add account name=account4 Fairshare=100
+add user name=user5 DefaultAccount=account4 MaxSubmitJobs=1000
+add user name=user50 DefaultAccount=account25 MaxSubmitJobs=1000
+
+add account name=account22 Fairshare=100
+add user name=user51 DefaultAccount=account22 MaxSubmitJobs=1000
+
+add account name=account43 Fairshare=100
+add user name=user52 DefaultAccount=account43 MaxSubmitJobs=1000
+
+add account name=account87 Fairshare=100
+add user name=user53 DefaultAccount=account87 MaxSubmitJobs=1000
+
+add account name=account38 Fairshare=100
+add user name=user54 DefaultAccount=account38 MaxSubmitJobs=1000
+
+add account name=account94 Fairshare=100
+add user name=user55 DefaultAccount=account94 MaxSubmitJobs=1000
+
+add account name=account77 Fairshare=100
+add user name=user56 DefaultAccount=account77 MaxSubmitJobs=1000
+
+add account name=account21 Fairshare=100
+add user name=user57 DefaultAccount=account21 MaxSubmitJobs=1000
+
+add account name=account13 Fairshare=100
+add user name=user58 DefaultAccount=account13 MaxSubmitJobs=1000
+
+add account name=account81 Fairshare=100
+add user name=user59 DefaultAccount=account81 MaxSubmitJobs=1000
+add user name=user6 DefaultAccount=account25 MaxSubmitJobs=1000
+add user name=user60 DefaultAccount=account70 MaxSubmitJobs=1000
+
+add account name=account6 Fairshare=100
+add user name=user61 DefaultAccount=account6 MaxSubmitJobs=1000
+add user name=user62 DefaultAccount=account9 MaxSubmitJobs=1000
+
+add account name=account49 Fairshare=100
+add user name=user63 DefaultAccount=account49 MaxSubmitJobs=1000
+
+add account name=account26 Fairshare=100
+add user name=user64 DefaultAccount=account26 MaxSubmitJobs=1000
+add user name=user65 DefaultAccount=account84 MaxSubmitJobs=1000
+add user name=user66 DefaultAccount=account9 MaxSubmitJobs=1000
+
+add account name=account57 Fairshare=100
+add user name=user67 DefaultAccount=account57 MaxSubmitJobs=1000
+
+add account name=account62 Fairshare=100
+add user name=user68 DefaultAccount=account62 MaxSubmitJobs=1000
+
+add account name=account12 Fairshare=100
+add user name=user69 DefaultAccount=account12 MaxSubmitJobs=1000
+
+add account name=account41 Fairshare=100
+add user name=user7 DefaultAccount=account41 MaxSubmitJobs=1000
+
+add account name=account46 Fairshare=100
+add user name=user70 DefaultAccount=account46 MaxSubmitJobs=1000
+
+add account name=account40 Fairshare=100
+add user name=user71 DefaultAccount=account40 MaxSubmitJobs=1000
+add user name=user71 DefaultAccount=account41 MaxSubmitJobs=1000
+
+add account name=account50 Fairshare=100
+add user name=user72 DefaultAccount=account50 MaxSubmitJobs=1000
+
+add account name=account83 Fairshare=100
+add user name=user73 DefaultAccount=account83 MaxSubmitJobs=1000
+add user name=user74 DefaultAccount=account6 MaxSubmitJobs=1000
+
+add account name=account61 Fairshare=100
+add user name=user75 DefaultAccount=account61 MaxSubmitJobs=1000
+
+add account name=account65 Fairshare=100
+add user name=user76 DefaultAccount=account65 MaxSubmitJobs=1000
+
+add account name=account32 Fairshare=100
+add user name=user77 DefaultAccount=account32 MaxSubmitJobs=1000
+add user name=user78 DefaultAccount=account24 MaxSubmitJobs=1000
+add user name=user79 DefaultAccount=account51 MaxSubmitJobs=1000
+add user name=user8 DefaultAccount=account83 MaxSubmitJobs=1000
+
+add account name=account54 Fairshare=100
+add user name=user80 DefaultAccount=account54 MaxSubmitJobs=1000
+
+add account name=account72 Fairshare=100
+add user name=user81 DefaultAccount=account72 MaxSubmitJobs=1000
+
+add account name=account14 Fairshare=100
+add user name=user82 DefaultAccount=account14 MaxSubmitJobs=1000
+
+add account name=account15 Fairshare=100
+add user name=user82 DefaultAccount=account15 MaxSubmitJobs=1000
+
+add account name=account58 Fairshare=100
+add user name=user82 DefaultAccount=account58 MaxSubmitJobs=1000
+
+add account name=account63 Fairshare=100
+add user name=user82 DefaultAccount=account63 MaxSubmitJobs=1000
+
+add account name=account64 Fairshare=100
+add user name=user82 DefaultAccount=account64 MaxSubmitJobs=1000
+
+add account name=account93 Fairshare=100
+add user name=user82 DefaultAccount=account93 MaxSubmitJobs=1000
+add user name=user83 DefaultAccount=account26 MaxSubmitJobs=1000
+add user name=user84 DefaultAccount=account86 MaxSubmitJobs=1000
+
+add account name=account39 Fairshare=100
+add user name=user85 DefaultAccount=account39 MaxSubmitJobs=1000
+add user name=user86 DefaultAccount=account45 MaxSubmitJobs=1000
+add user name=user87 DefaultAccount=account82 MaxSubmitJobs=1000
+add user name=user88 DefaultAccount=account19 MaxSubmitJobs=1000
+
+add account name=account2 Fairshare=100
+add user name=user89 DefaultAccount=account2 MaxSubmitJobs=1000
+
+add account name=account47 Fairshare=100
+add user name=user9 DefaultAccount=account47 MaxSubmitJobs=1000
+
+add account name=account48 Fairshare=100
+add user name=user9 DefaultAccount=account48 MaxSubmitJobs=1000
+add user name=user90 DefaultAccount=account74 MaxSubmitJobs=1000
+
+add account name=account31 Fairshare=100
+add user name=user91 DefaultAccount=account31 MaxSubmitJobs=1000
+
+add account name=account67 Fairshare=100
+add user name=user92 DefaultAccount=account67 MaxSubmitJobs=1000
+
+add account name=account79 Fairshare=100
+add user name=user93 DefaultAccount=account79 MaxSubmitJobs=1000
+
+add account name=account23 Fairshare=100
+add user name=user94 DefaultAccount=account23 MaxSubmitJobs=1000
+add user name=user95 DefaultAccount=account47 MaxSubmitJobs=1000
+add user name=user96 DefaultAccount=account67 MaxSubmitJobs=1000
+
+add account name=account55 Fairshare=100
+add user name=user97 DefaultAccount=account55 MaxSubmitJobs=1000
+add user name=user98 DefaultAccount=account48 MaxSubmitJobs=1000
+
+add account name=account17 Fairshare=100
+add user name=user99 DefaultAccount=account17 MaxSubmitJobs=1000
+
+add account name=account18 Fairshare=100
+add user name=user99 DefaultAccount=account18 MaxSubmitJobs=1000
 
 modify user set qoslevel="normal,supporters"
 list associations format=Account,Cluster,User,Fairshare tree withd

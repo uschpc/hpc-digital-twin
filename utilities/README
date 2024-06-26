@@ -4,12 +4,12 @@ Step to generate data
 
 ## all jobs
 ```
-sacct --starttime 10/01/23 --endtime 10/31/23 --format=User,JobID,Submit,Start,End,Timelimit%12,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P
+sacct --starttime 03/18/24 --endtime 03/28/24 --format=User,JobID,Submit,Start,End,TimelimitRaw,ElapsedRaw,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P -a
 
 ```
 ## Or had -r option if you want to look at partition(s) 
 ```
-sacct --starttime 10/01/23 --endtime 10/31/23  molguin --format=User,JobID,Submit,Start,End,Timelimit%12,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P -r epyc-64
+sacct --starttime 03/18/24 --endtime 03/28/24 --format=User,JobID,Submit,Start,End,TimelimitRaw,ElapsedRaw,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P -a -r epyc-64 > slurm_sacct_epyc64_10days
 ```
 
 save stdout to "slurm_sacct_epyc64_10days" for example

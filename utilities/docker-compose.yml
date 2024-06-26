@@ -16,8 +16,8 @@ services:
       - './results/headnode:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/headnode/var/spool/slurm:/var/spool/slurm'
-      - './results/headnode/var/state/:/var/state'
+#      - './results/headnode/var/spool/slurm:/var/spool/slurm'
+#      - './results/headnode/var/state/:/var/state'
   e1: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e1
@@ -25,7 +25,7 @@ services:
     command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
     networks: 
       network1:  
-        ipv4_address: 172.32.3.172
+        ipv4_address: 172.32.3.79
     expose: 
       - '6817'
       - '6818'
@@ -34,8 +34,8 @@ services:
       - './results/e1:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e1/var/spool/slurm:/var/spool/slurm'
-      - './results/e1/var/state/:/var/state'
+#      - './results/e1/var/spool/slurm:/var/spool/slurm'
+#      - './results/e1/var/state/:/var/state'
   e2: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e2
@@ -52,8 +52,8 @@ services:
       - './results/e2:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e2/var/spool/slurm:/var/spool/slurm'
-      - './results/e2/var/state/:/var/state'
+#      - './results/e2/var/spool/slurm:/var/spool/slurm'
+#      - './results/e2/var/state/:/var/state'
   e3: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e3
@@ -70,8 +70,8 @@ services:
       - './results/e3:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e3/var/spool/slurm:/var/spool/slurm'
-      - './results/e3/var/state/:/var/state'
+#      - './results/e3/var/spool/slurm:/var/spool/slurm'
+#      - './results/e3/var/state/:/var/state'
   e4: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e4
@@ -88,8 +88,8 @@ services:
       - './results/e4:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e4/var/spool/slurm:/var/spool/slurm'
-      - './results/e4/var/state/:/var/state'
+#      - './results/e4/var/spool/slurm:/var/spool/slurm'
+#      - './results/e4/var/state/:/var/state'
   e5: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e5
@@ -106,8 +106,8 @@ services:
       - './results/e5:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e5/var/spool/slurm:/var/spool/slurm'
-      - './results/e5/var/state/:/var/state'
+#      - './results/e5/var/spool/slurm:/var/spool/slurm'
+#      - './results/e5/var/state/:/var/state'
   e6: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e6
@@ -124,8 +124,8 @@ services:
       - './results/e6:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e6/var/spool/slurm:/var/spool/slurm'
-      - './results/e6/var/state/:/var/state'
+#      - './results/e6/var/spool/slurm:/var/spool/slurm'
+#      - './results/e6/var/state/:/var/state'
   e7: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e7
@@ -142,8 +142,8 @@ services:
       - './results/e7:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e7/var/spool/slurm:/var/spool/slurm'
-      - './results/e7/var/state/:/var/state'
+#      - './results/e7/var/spool/slurm:/var/spool/slurm'
+#      - './results/e7/var/state/:/var/state'
   e8: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e8
@@ -160,8 +160,8 @@ services:
       - './results/e8:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e8/var/spool/slurm:/var/spool/slurm'
-      - './results/e8/var/state/:/var/state'
+#      - './results/e8/var/spool/slurm:/var/spool/slurm'
+#      - './results/e8/var/state/:/var/state'
   e9: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e9
@@ -178,8 +178,8 @@ services:
       - './results/e9:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e9/var/spool/slurm:/var/spool/slurm'
-      - './results/e9/var/state/:/var/state'
+#      - './results/e9/var/spool/slurm:/var/spool/slurm'
+#      - './results/e9/var/state/:/var/state'
   e10: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e10
@@ -196,8 +196,8 @@ services:
       - './results/e10:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e10/var/spool/slurm:/var/spool/slurm'
-      - './results/e10/var/state/:/var/state'
+#      - './results/e10/var/spool/slurm:/var/spool/slurm'
+#      - './results/e10/var/state/:/var/state'
   e11: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e11
@@ -214,8 +214,8 @@ services:
       - './results/e11:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e11/var/spool/slurm:/var/spool/slurm'
-      - './results/e11/var/state/:/var/state'
+#      - './results/e11/var/spool/slurm:/var/spool/slurm'
+#      - './results/e11/var/state/:/var/state'
   e12: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e12
@@ -232,8 +232,8 @@ services:
       - './results/e12:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e12/var/spool/slurm:/var/spool/slurm'
-      - './results/e12/var/state/:/var/state'
+#      - './results/e12/var/spool/slurm:/var/spool/slurm'
+#      - './results/e12/var/state/:/var/state'
   e13: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e13
@@ -250,8 +250,8 @@ services:
       - './results/e13:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e13/var/spool/slurm:/var/spool/slurm'
-      - './results/e13/var/state/:/var/state'
+#      - './results/e13/var/spool/slurm:/var/spool/slurm'
+#      - './results/e13/var/state/:/var/state'
   e14: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e14
@@ -268,8 +268,8 @@ services:
       - './results/e14:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e14/var/spool/slurm:/var/spool/slurm'
-      - './results/e14/var/state/:/var/state'
+#      - './results/e14/var/spool/slurm:/var/spool/slurm'
+#      - './results/e14/var/state/:/var/state'
   e15: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e15
@@ -286,8 +286,8 @@ services:
       - './results/e15:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e15/var/spool/slurm:/var/spool/slurm'
-      - './results/e15/var/state/:/var/state'
+#      - './results/e15/var/spool/slurm:/var/spool/slurm'
+#      - './results/e15/var/state/:/var/state'
   e16: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e16
@@ -304,8 +304,8 @@ services:
       - './results/e16:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e16/var/spool/slurm:/var/spool/slurm'
-      - './results/e16/var/state/:/var/state'
+#      - './results/e16/var/spool/slurm:/var/spool/slurm'
+#      - './results/e16/var/state/:/var/state'
   e17: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e17
@@ -322,8 +322,8 @@ services:
       - './results/e17:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e17/var/spool/slurm:/var/spool/slurm'
-      - './results/e17/var/state/:/var/state'
+#      - './results/e17/var/spool/slurm:/var/spool/slurm'
+#      - './results/e17/var/state/:/var/state'
   e18: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e18
@@ -340,8 +340,8 @@ services:
       - './results/e18:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e18/var/spool/slurm:/var/spool/slurm'
-      - './results/e18/var/state/:/var/state'
+#      - './results/e18/var/spool/slurm:/var/spool/slurm'
+#      - './results/e18/var/state/:/var/state'
   e19: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e19
@@ -358,8 +358,8 @@ services:
       - './results/e19:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e19/var/spool/slurm:/var/spool/slurm'
-      - './results/e19/var/state/:/var/state'
+#      - './results/e19/var/spool/slurm:/var/spool/slurm'
+#      - './results/e19/var/state/:/var/state'
   e20: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e20
@@ -376,8 +376,8 @@ services:
       - './results/e20:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e20/var/spool/slurm:/var/spool/slurm'
-      - './results/e20/var/state/:/var/state'
+#      - './results/e20/var/spool/slurm:/var/spool/slurm'
+#      - './results/e20/var/state/:/var/state'
   e21: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e21
@@ -394,8 +394,8 @@ services:
       - './results/e21:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e21/var/spool/slurm:/var/spool/slurm'
-      - './results/e21/var/state/:/var/state'
+#      - './results/e21/var/spool/slurm:/var/spool/slurm'
+#      - './results/e21/var/state/:/var/state'
   e22: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e22
@@ -412,8 +412,8 @@ services:
       - './results/e22:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e22/var/spool/slurm:/var/spool/slurm'
-      - './results/e22/var/state/:/var/state'
+#      - './results/e22/var/spool/slurm:/var/spool/slurm'
+#      - './results/e22/var/state/:/var/state'
   e23: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e23
@@ -430,8 +430,8 @@ services:
       - './results/e23:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e23/var/spool/slurm:/var/spool/slurm'
-      - './results/e23/var/state/:/var/state'
+#      - './results/e23/var/spool/slurm:/var/spool/slurm'
+#      - './results/e23/var/state/:/var/state'
   e24: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e24
@@ -448,8 +448,8 @@ services:
       - './results/e24:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e24/var/spool/slurm:/var/spool/slurm'
-      - './results/e24/var/state/:/var/state'
+#      - './results/e24/var/spool/slurm:/var/spool/slurm'
+#      - './results/e24/var/state/:/var/state'
   e25: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e25
@@ -466,8 +466,8 @@ services:
       - './results/e25:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e25/var/spool/slurm:/var/spool/slurm'
-      - './results/e25/var/state/:/var/state'
+#      - './results/e25/var/spool/slurm:/var/spool/slurm'
+#      - './results/e25/var/state/:/var/state'
   e26: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e26
@@ -484,8 +484,8 @@ services:
       - './results/e26:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e26/var/spool/slurm:/var/spool/slurm'
-      - './results/e26/var/state/:/var/state'
+#      - './results/e26/var/spool/slurm:/var/spool/slurm'
+#      - './results/e26/var/state/:/var/state'
   e27: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e27
@@ -502,8 +502,8 @@ services:
       - './results/e27:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e27/var/spool/slurm:/var/spool/slurm'
-      - './results/e27/var/state/:/var/state'
+#      - './results/e27/var/spool/slurm:/var/spool/slurm'
+#      - './results/e27/var/state/:/var/state'
   e28: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e28
@@ -520,8 +520,8 @@ services:
       - './results/e28:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e28/var/spool/slurm:/var/spool/slurm'
-      - './results/e28/var/state/:/var/state'
+#      - './results/e28/var/spool/slurm:/var/spool/slurm'
+#      - './results/e28/var/state/:/var/state'
   e29: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e29
@@ -538,8 +538,8 @@ services:
       - './results/e29:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e29/var/spool/slurm:/var/spool/slurm'
-      - './results/e29/var/state/:/var/state'
+#      - './results/e29/var/spool/slurm:/var/spool/slurm'
+#      - './results/e29/var/state/:/var/state'
   e30: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e30
@@ -556,8 +556,8 @@ services:
       - './results/e30:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e30/var/spool/slurm:/var/spool/slurm'
-      - './results/e30/var/state/:/var/state'
+#      - './results/e30/var/spool/slurm:/var/spool/slurm'
+#      - './results/e30/var/state/:/var/state'
   e31: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e31
@@ -574,8 +574,8 @@ services:
       - './results/e31:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e31/var/spool/slurm:/var/spool/slurm'
-      - './results/e31/var/state/:/var/state'
+#      - './results/e31/var/spool/slurm:/var/spool/slurm'
+#      - './results/e31/var/state/:/var/state'
   e32: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e32
@@ -592,8 +592,8 @@ services:
       - './results/e32:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e32/var/spool/slurm:/var/spool/slurm'
-      - './results/e32/var/state/:/var/state'
+#      - './results/e32/var/spool/slurm:/var/spool/slurm'
+#      - './results/e32/var/state/:/var/state'
   e33: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e33
@@ -610,8 +610,8 @@ services:
       - './results/e33:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e33/var/spool/slurm:/var/spool/slurm'
-      - './results/e33/var/state/:/var/state'
+#      - './results/e33/var/spool/slurm:/var/spool/slurm'
+#      - './results/e33/var/state/:/var/state'
   e34: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e34
@@ -628,8 +628,8 @@ services:
       - './results/e34:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e34/var/spool/slurm:/var/spool/slurm'
-      - './results/e34/var/state/:/var/state'
+#      - './results/e34/var/spool/slurm:/var/spool/slurm'
+#      - './results/e34/var/state/:/var/state'
   e35: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e35
@@ -646,8 +646,8 @@ services:
       - './results/e35:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e35/var/spool/slurm:/var/spool/slurm'
-      - './results/e35/var/state/:/var/state'
+#      - './results/e35/var/spool/slurm:/var/spool/slurm'
+#      - './results/e35/var/state/:/var/state'
   e36: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e36
@@ -664,8 +664,8 @@ services:
       - './results/e36:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e36/var/spool/slurm:/var/spool/slurm'
-      - './results/e36/var/state/:/var/state'
+#      - './results/e36/var/spool/slurm:/var/spool/slurm'
+#      - './results/e36/var/state/:/var/state'
   e37: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e37
@@ -682,8 +682,8 @@ services:
       - './results/e37:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e37/var/spool/slurm:/var/spool/slurm'
-      - './results/e37/var/state/:/var/state'
+#      - './results/e37/var/spool/slurm:/var/spool/slurm'
+#      - './results/e37/var/state/:/var/state'
   e38: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e38
@@ -700,8 +700,8 @@ services:
       - './results/e38:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e38/var/spool/slurm:/var/spool/slurm'
-      - './results/e38/var/state/:/var/state'
+#      - './results/e38/var/spool/slurm:/var/spool/slurm'
+#      - './results/e38/var/state/:/var/state'
   e39: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e39
@@ -718,8 +718,8 @@ services:
       - './results/e39:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e39/var/spool/slurm:/var/spool/slurm'
-      - './results/e39/var/state/:/var/state'
+#      - './results/e39/var/spool/slurm:/var/spool/slurm'
+#      - './results/e39/var/state/:/var/state'
   e40: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e40
@@ -736,8 +736,8 @@ services:
       - './results/e40:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e40/var/spool/slurm:/var/spool/slurm'
-      - './results/e40/var/state/:/var/state'
+#      - './results/e40/var/spool/slurm:/var/spool/slurm'
+#      - './results/e40/var/state/:/var/state'
   e41: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e41
@@ -754,8 +754,8 @@ services:
       - './results/e41:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e41/var/spool/slurm:/var/spool/slurm'
-      - './results/e41/var/state/:/var/state'
+#      - './results/e41/var/spool/slurm:/var/spool/slurm'
+#      - './results/e41/var/state/:/var/state'
   e42: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e42
@@ -772,8 +772,8 @@ services:
       - './results/e42:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e42/var/spool/slurm:/var/spool/slurm'
-      - './results/e42/var/state/:/var/state'
+#      - './results/e42/var/spool/slurm:/var/spool/slurm'
+#      - './results/e42/var/state/:/var/state'
   e43: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e43
@@ -790,8 +790,8 @@ services:
       - './results/e43:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e43/var/spool/slurm:/var/spool/slurm'
-      - './results/e43/var/state/:/var/state'
+#      - './results/e43/var/spool/slurm:/var/spool/slurm'
+#      - './results/e43/var/state/:/var/state'
   e44: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e44
@@ -808,8 +808,8 @@ services:
       - './results/e44:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e44/var/spool/slurm:/var/spool/slurm'
-      - './results/e44/var/state/:/var/state'
+#      - './results/e44/var/spool/slurm:/var/spool/slurm'
+#      - './results/e44/var/state/:/var/state'
   e45: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e45
@@ -826,8 +826,8 @@ services:
       - './results/e45:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e45/var/spool/slurm:/var/spool/slurm'
-      - './results/e45/var/state/:/var/state'
+#      - './results/e45/var/spool/slurm:/var/spool/slurm'
+#      - './results/e45/var/state/:/var/state'
   e46: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e46
@@ -844,8 +844,8 @@ services:
       - './results/e46:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e46/var/spool/slurm:/var/spool/slurm'
-      - './results/e46/var/state/:/var/state'
+#      - './results/e46/var/spool/slurm:/var/spool/slurm'
+#      - './results/e46/var/state/:/var/state'
   e47: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e47
@@ -862,8 +862,8 @@ services:
       - './results/e47:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e47/var/spool/slurm:/var/spool/slurm'
-      - './results/e47/var/state/:/var/state'
+#      - './results/e47/var/spool/slurm:/var/spool/slurm'
+#      - './results/e47/var/state/:/var/state'
   e48: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e48
@@ -880,8 +880,8 @@ services:
       - './results/e48:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e48/var/spool/slurm:/var/spool/slurm'
-      - './results/e48/var/state/:/var/state'
+#      - './results/e48/var/spool/slurm:/var/spool/slurm'
+#      - './results/e48/var/state/:/var/state'
   e49: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e49
@@ -898,8 +898,8 @@ services:
       - './results/e49:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e49/var/spool/slurm:/var/spool/slurm'
-      - './results/e49/var/state/:/var/state'
+#      - './results/e49/var/spool/slurm:/var/spool/slurm'
+#      - './results/e49/var/state/:/var/state'
   e50: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e50
@@ -916,8 +916,8 @@ services:
       - './results/e50:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e50/var/spool/slurm:/var/spool/slurm'
-      - './results/e50/var/state/:/var/state'
+#      - './results/e50/var/spool/slurm:/var/spool/slurm'
+#      - './results/e50/var/state/:/var/state'
   e51: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e51
@@ -934,8 +934,8 @@ services:
       - './results/e51:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e51/var/spool/slurm:/var/spool/slurm'
-      - './results/e51/var/state/:/var/state'
+#      - './results/e51/var/spool/slurm:/var/spool/slurm'
+#      - './results/e51/var/state/:/var/state'
   e52: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e52
@@ -952,8 +952,8 @@ services:
       - './results/e52:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e52/var/spool/slurm:/var/spool/slurm'
-      - './results/e52/var/state/:/var/state'
+#      - './results/e52/var/spool/slurm:/var/spool/slurm'
+#      - './results/e52/var/state/:/var/state'
   e53: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e53
@@ -970,8 +970,8 @@ services:
       - './results/e53:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e53/var/spool/slurm:/var/spool/slurm'
-      - './results/e53/var/state/:/var/state'
+#      - './results/e53/var/spool/slurm:/var/spool/slurm'
+#      - './results/e53/var/state/:/var/state'
   e54: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e54
@@ -988,8 +988,8 @@ services:
       - './results/e54:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e54/var/spool/slurm:/var/spool/slurm'
-      - './results/e54/var/state/:/var/state'
+#      - './results/e54/var/spool/slurm:/var/spool/slurm'
+#      - './results/e54/var/state/:/var/state'
   e55: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e55
@@ -1006,8 +1006,8 @@ services:
       - './results/e55:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e55/var/spool/slurm:/var/spool/slurm'
-      - './results/e55/var/state/:/var/state'
+#      - './results/e55/var/spool/slurm:/var/spool/slurm'
+#      - './results/e55/var/state/:/var/state'
   e56: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e56
@@ -1024,8 +1024,8 @@ services:
       - './results/e56:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e56/var/spool/slurm:/var/spool/slurm'
-      - './results/e56/var/state/:/var/state'
+#      - './results/e56/var/spool/slurm:/var/spool/slurm'
+#      - './results/e56/var/state/:/var/state'
   e57: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e57
@@ -1042,8 +1042,8 @@ services:
       - './results/e57:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e57/var/spool/slurm:/var/spool/slurm'
-      - './results/e57/var/state/:/var/state'
+#      - './results/e57/var/spool/slurm:/var/spool/slurm'
+#      - './results/e57/var/state/:/var/state'
   e58: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e58
@@ -1060,8 +1060,8 @@ services:
       - './results/e58:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e58/var/spool/slurm:/var/spool/slurm'
-      - './results/e58/var/state/:/var/state'
+#      - './results/e58/var/spool/slurm:/var/spool/slurm'
+#      - './results/e58/var/state/:/var/state'
   e59: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e59
@@ -1078,8 +1078,8 @@ services:
       - './results/e59:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e59/var/spool/slurm:/var/spool/slurm'
-      - './results/e59/var/state/:/var/state'
+#      - './results/e59/var/spool/slurm:/var/spool/slurm'
+#      - './results/e59/var/state/:/var/state'
   e60: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e60
@@ -1096,8 +1096,8 @@ services:
       - './results/e60:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e60/var/spool/slurm:/var/spool/slurm'
-      - './results/e60/var/state/:/var/state'
+#      - './results/e60/var/spool/slurm:/var/spool/slurm'
+#      - './results/e60/var/state/:/var/state'
   e61: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e61
@@ -1114,8 +1114,8 @@ services:
       - './results/e61:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e61/var/spool/slurm:/var/spool/slurm'
-      - './results/e61/var/state/:/var/state'
+#      - './results/e61/var/spool/slurm:/var/spool/slurm'
+#      - './results/e61/var/state/:/var/state'
   e62: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e62
@@ -1132,8 +1132,8 @@ services:
       - './results/e62:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e62/var/spool/slurm:/var/spool/slurm'
-      - './results/e62/var/state/:/var/state'
+#      - './results/e62/var/spool/slurm:/var/spool/slurm'
+#      - './results/e62/var/state/:/var/state'
   e63: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e63
@@ -1150,8 +1150,8 @@ services:
       - './results/e63:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e63/var/spool/slurm:/var/spool/slurm'
-      - './results/e63/var/state/:/var/state'
+#      - './results/e63/var/spool/slurm:/var/spool/slurm'
+#      - './results/e63/var/state/:/var/state'
   e64: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e64
@@ -1168,8 +1168,8 @@ services:
       - './results/e64:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e64/var/spool/slurm:/var/spool/slurm'
-      - './results/e64/var/state/:/var/state'
+#      - './results/e64/var/spool/slurm:/var/spool/slurm'
+#      - './results/e64/var/state/:/var/state'
   e65: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e65
@@ -1186,8 +1186,8 @@ services:
       - './results/e65:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e65/var/spool/slurm:/var/spool/slurm'
-      - './results/e65/var/state/:/var/state'
+#      - './results/e65/var/spool/slurm:/var/spool/slurm'
+#      - './results/e65/var/state/:/var/state'
   e66: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e66
@@ -1204,8 +1204,8 @@ services:
       - './results/e66:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e66/var/spool/slurm:/var/spool/slurm'
-      - './results/e66/var/state/:/var/state'
+#      - './results/e66/var/spool/slurm:/var/spool/slurm'
+#      - './results/e66/var/state/:/var/state'
   e67: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e67
@@ -1222,8 +1222,8 @@ services:
       - './results/e67:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e67/var/spool/slurm:/var/spool/slurm'
-      - './results/e67/var/state/:/var/state'
+#      - './results/e67/var/spool/slurm:/var/spool/slurm'
+#      - './results/e67/var/state/:/var/state'
   e68: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e68
@@ -1240,8 +1240,8 @@ services:
       - './results/e68:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e68/var/spool/slurm:/var/spool/slurm'
-      - './results/e68/var/state/:/var/state'
+#      - './results/e68/var/spool/slurm:/var/spool/slurm'
+#      - './results/e68/var/state/:/var/state'
   e69: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e69
@@ -1258,8 +1258,8 @@ services:
       - './results/e69:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e69/var/spool/slurm:/var/spool/slurm'
-      - './results/e69/var/state/:/var/state'
+#      - './results/e69/var/spool/slurm:/var/spool/slurm'
+#      - './results/e69/var/state/:/var/state'
   e70: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e70
@@ -1276,8 +1276,8 @@ services:
       - './results/e70:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e70/var/spool/slurm:/var/spool/slurm'
-      - './results/e70/var/state/:/var/state'
+#      - './results/e70/var/spool/slurm:/var/spool/slurm'
+#      - './results/e70/var/state/:/var/state'
   e71: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e71
@@ -1294,8 +1294,8 @@ services:
       - './results/e71:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e71/var/spool/slurm:/var/spool/slurm'
-      - './results/e71/var/state/:/var/state'
+#      - './results/e71/var/spool/slurm:/var/spool/slurm'
+#      - './results/e71/var/state/:/var/state'
   e72: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e72
@@ -1312,8 +1312,8 @@ services:
       - './results/e72:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e72/var/spool/slurm:/var/spool/slurm'
-      - './results/e72/var/state/:/var/state'
+#      - './results/e72/var/spool/slurm:/var/spool/slurm'
+#      - './results/e72/var/state/:/var/state'
   e73: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e73
@@ -1330,8 +1330,8 @@ services:
       - './results/e73:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e73/var/spool/slurm:/var/spool/slurm'
-      - './results/e73/var/state/:/var/state'
+#      - './results/e73/var/spool/slurm:/var/spool/slurm'
+#      - './results/e73/var/state/:/var/state'
   e74: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e74
@@ -1348,8 +1348,8 @@ services:
       - './results/e74:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e74/var/spool/slurm:/var/spool/slurm'
-      - './results/e74/var/state/:/var/state'
+#      - './results/e74/var/spool/slurm:/var/spool/slurm'
+#      - './results/e74/var/state/:/var/state'
   e75: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e75
@@ -1366,8 +1366,8 @@ services:
       - './results/e75:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e75/var/spool/slurm:/var/spool/slurm'
-      - './results/e75/var/state/:/var/state'
+#      - './results/e75/var/spool/slurm:/var/spool/slurm'
+#      - './results/e75/var/state/:/var/state'
   e76: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e76
@@ -1384,8 +1384,8 @@ services:
       - './results/e76:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e76/var/spool/slurm:/var/spool/slurm'
-      - './results/e76/var/state/:/var/state'
+#      - './results/e76/var/spool/slurm:/var/spool/slurm'
+#      - './results/e76/var/state/:/var/state'
   e77: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e77
@@ -1402,8 +1402,8 @@ services:
       - './results/e77:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e77/var/spool/slurm:/var/spool/slurm'
-      - './results/e77/var/state/:/var/state'
+#      - './results/e77/var/spool/slurm:/var/spool/slurm'
+#      - './results/e77/var/state/:/var/state'
   e78: 
     image: carc/slurm_vc:slurm-20.02-sim
     hostname: e78
@@ -1420,1682 +1420,8 @@ services:
       - './results/e78:/root/results'
       - './etc:/opt/slurm/etc'
       - './results/home:/home'
-      - './results/e78/var/spool/slurm:/var/spool/slurm'
-      - './results/e78/var/state/:/var/state'
-  e79: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e79
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.79
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e79:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e79/var/spool/slurm:/var/spool/slurm'
-      - './results/e79/var/state/:/var/state'
-  e80: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e80
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.80
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e80:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e80/var/spool/slurm:/var/spool/slurm'
-      - './results/e80/var/state/:/var/state'
-  e81: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e81
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.81
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e81:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e81/var/spool/slurm:/var/spool/slurm'
-      - './results/e81/var/state/:/var/state'
-  e82: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e82
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.82
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e82:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e82/var/spool/slurm:/var/spool/slurm'
-      - './results/e82/var/state/:/var/state'
-  e83: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e83
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.83
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e83:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e83/var/spool/slurm:/var/spool/slurm'
-      - './results/e83/var/state/:/var/state'
-  e84: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e84
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.84
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e84:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e84/var/spool/slurm:/var/spool/slurm'
-      - './results/e84/var/state/:/var/state'
-  e85: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e85
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.85
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e85:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e85/var/spool/slurm:/var/spool/slurm'
-      - './results/e85/var/state/:/var/state'
-  e86: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e86
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.86
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e86:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e86/var/spool/slurm:/var/spool/slurm'
-      - './results/e86/var/state/:/var/state'
-  e87: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e87
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.87
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e87:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e87/var/spool/slurm:/var/spool/slurm'
-      - './results/e87/var/state/:/var/state'
-  e88: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e88
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.88
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e88:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e88/var/spool/slurm:/var/spool/slurm'
-      - './results/e88/var/state/:/var/state'
-  e89: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e89
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.89
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e89:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e89/var/spool/slurm:/var/spool/slurm'
-      - './results/e89/var/state/:/var/state'
-  e90: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e90
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.90
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e90:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e90/var/spool/slurm:/var/spool/slurm'
-      - './results/e90/var/state/:/var/state'
-  e91: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e91
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.91
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e91:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e91/var/spool/slurm:/var/spool/slurm'
-      - './results/e91/var/state/:/var/state'
-  e92: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e92
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.92
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e92:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e92/var/spool/slurm:/var/spool/slurm'
-      - './results/e92/var/state/:/var/state'
-  e93: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e93
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.93
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e93:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e93/var/spool/slurm:/var/spool/slurm'
-      - './results/e93/var/state/:/var/state'
-  e94: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e94
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.94
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e94:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e94/var/spool/slurm:/var/spool/slurm'
-      - './results/e94/var/state/:/var/state'
-  e95: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e95
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.95
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e95:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e95/var/spool/slurm:/var/spool/slurm'
-      - './results/e95/var/state/:/var/state'
-  e96: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e96
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.96
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e96:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e96/var/spool/slurm:/var/spool/slurm'
-      - './results/e96/var/state/:/var/state'
-  e97: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e97
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.97
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e97:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e97/var/spool/slurm:/var/spool/slurm'
-      - './results/e97/var/state/:/var/state'
-  e98: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e98
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.98
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e98:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e98/var/spool/slurm:/var/spool/slurm'
-      - './results/e98/var/state/:/var/state'
-  e99: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e99
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.99
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e99:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e99/var/spool/slurm:/var/spool/slurm'
-      - './results/e99/var/state/:/var/state'
-  e100: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e100
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.100
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e100:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e100/var/spool/slurm:/var/spool/slurm'
-      - './results/e100/var/state/:/var/state'
-  e101: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e101
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.101
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e101:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e101/var/spool/slurm:/var/spool/slurm'
-      - './results/e101/var/state/:/var/state'
-  e102: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e102
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.102
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e102:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e102/var/spool/slurm:/var/spool/slurm'
-      - './results/e102/var/state/:/var/state'
-  e103: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e103
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.103
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e103:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e103/var/spool/slurm:/var/spool/slurm'
-      - './results/e103/var/state/:/var/state'
-  e104: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e104
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.104
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e104:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e104/var/spool/slurm:/var/spool/slurm'
-      - './results/e104/var/state/:/var/state'
-  e105: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e105
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.105
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e105:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e105/var/spool/slurm:/var/spool/slurm'
-      - './results/e105/var/state/:/var/state'
-  e106: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e106
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.106
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e106:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e106/var/spool/slurm:/var/spool/slurm'
-      - './results/e106/var/state/:/var/state'
-  e107: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e107
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.107
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e107:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e107/var/spool/slurm:/var/spool/slurm'
-      - './results/e107/var/state/:/var/state'
-  e108: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e108
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.108
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e108:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e108/var/spool/slurm:/var/spool/slurm'
-      - './results/e108/var/state/:/var/state'
-  e109: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e109
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.109
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e109:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e109/var/spool/slurm:/var/spool/slurm'
-      - './results/e109/var/state/:/var/state'
-  e110: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e110
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.110
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e110:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e110/var/spool/slurm:/var/spool/slurm'
-      - './results/e110/var/state/:/var/state'
-  e111: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e111
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.111
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e111:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e111/var/spool/slurm:/var/spool/slurm'
-      - './results/e111/var/state/:/var/state'
-  e112: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e112
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.112
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e112:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e112/var/spool/slurm:/var/spool/slurm'
-      - './results/e112/var/state/:/var/state'
-  e113: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e113
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.113
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e113:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e113/var/spool/slurm:/var/spool/slurm'
-      - './results/e113/var/state/:/var/state'
-  e114: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e114
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.114
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e114:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e114/var/spool/slurm:/var/spool/slurm'
-      - './results/e114/var/state/:/var/state'
-  e115: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e115
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.115
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e115:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e115/var/spool/slurm:/var/spool/slurm'
-      - './results/e115/var/state/:/var/state'
-  e116: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e116
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.116
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e116:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e116/var/spool/slurm:/var/spool/slurm'
-      - './results/e116/var/state/:/var/state'
-  e117: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e117
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.117
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e117:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e117/var/spool/slurm:/var/spool/slurm'
-      - './results/e117/var/state/:/var/state'
-  e118: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e118
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.118
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e118:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e118/var/spool/slurm:/var/spool/slurm'
-      - './results/e118/var/state/:/var/state'
-  e119: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e119
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.119
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e119:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e119/var/spool/slurm:/var/spool/slurm'
-      - './results/e119/var/state/:/var/state'
-  e120: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e120
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.120
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e120:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e120/var/spool/slurm:/var/spool/slurm'
-      - './results/e120/var/state/:/var/state'
-  e121: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e121
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.121
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e121:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e121/var/spool/slurm:/var/spool/slurm'
-      - './results/e121/var/state/:/var/state'
-  e122: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e122
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.122
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e122:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e122/var/spool/slurm:/var/spool/slurm'
-      - './results/e122/var/state/:/var/state'
-  e123: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e123
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.123
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e123:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e123/var/spool/slurm:/var/spool/slurm'
-      - './results/e123/var/state/:/var/state'
-  e124: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e124
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.124
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e124:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e124/var/spool/slurm:/var/spool/slurm'
-      - './results/e124/var/state/:/var/state'
-  e125: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e125
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.125
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e125:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e125/var/spool/slurm:/var/spool/slurm'
-      - './results/e125/var/state/:/var/state'
-  e126: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e126
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.126
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e126:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e126/var/spool/slurm:/var/spool/slurm'
-      - './results/e126/var/state/:/var/state'
-  e127: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e127
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.127
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e127:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e127/var/spool/slurm:/var/spool/slurm'
-      - './results/e127/var/state/:/var/state'
-  e128: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e128
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.128
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e128:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e128/var/spool/slurm:/var/spool/slurm'
-      - './results/e128/var/state/:/var/state'
-  e129: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e129
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.129
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e129:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e129/var/spool/slurm:/var/spool/slurm'
-      - './results/e129/var/state/:/var/state'
-  e130: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e130
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.130
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e130:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e130/var/spool/slurm:/var/spool/slurm'
-      - './results/e130/var/state/:/var/state'
-  e131: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e131
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.131
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e131:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e131/var/spool/slurm:/var/spool/slurm'
-      - './results/e131/var/state/:/var/state'
-  e132: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e132
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.132
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e132:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e132/var/spool/slurm:/var/spool/slurm'
-      - './results/e132/var/state/:/var/state'
-  e133: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e133
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.133
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e133:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e133/var/spool/slurm:/var/spool/slurm'
-      - './results/e133/var/state/:/var/state'
-  e134: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e134
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.134
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e134:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e134/var/spool/slurm:/var/spool/slurm'
-      - './results/e134/var/state/:/var/state'
-  e135: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e135
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.135
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e135:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e135/var/spool/slurm:/var/spool/slurm'
-      - './results/e135/var/state/:/var/state'
-  e136: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e136
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.136
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e136:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e136/var/spool/slurm:/var/spool/slurm'
-      - './results/e136/var/state/:/var/state'
-  e137: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e137
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.137
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e137:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e137/var/spool/slurm:/var/spool/slurm'
-      - './results/e137/var/state/:/var/state'
-  e138: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e138
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.138
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e138:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e138/var/spool/slurm:/var/spool/slurm'
-      - './results/e138/var/state/:/var/state'
-  e139: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e139
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.139
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e139:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e139/var/spool/slurm:/var/spool/slurm'
-      - './results/e139/var/state/:/var/state'
-  e140: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e140
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.140
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e140:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e140/var/spool/slurm:/var/spool/slurm'
-      - './results/e140/var/state/:/var/state'
-  e141: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e141
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.141
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e141:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e141/var/spool/slurm:/var/spool/slurm'
-      - './results/e141/var/state/:/var/state'
-  e142: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e142
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.142
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e142:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e142/var/spool/slurm:/var/spool/slurm'
-      - './results/e142/var/state/:/var/state'
-  e143: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e143
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.143
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e143:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e143/var/spool/slurm:/var/spool/slurm'
-      - './results/e143/var/state/:/var/state'
-  e144: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e144
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.144
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e144:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e144/var/spool/slurm:/var/spool/slurm'
-      - './results/e144/var/state/:/var/state'
-  e145: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e145
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.145
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e145:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e145/var/spool/slurm:/var/spool/slurm'
-      - './results/e145/var/state/:/var/state'
-  e146: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e146
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.146
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e146:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e146/var/spool/slurm:/var/spool/slurm'
-      - './results/e146/var/state/:/var/state'
-  e147: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e147
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.147
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e147:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e147/var/spool/slurm:/var/spool/slurm'
-      - './results/e147/var/state/:/var/state'
-  e148: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e148
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.148
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e148:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e148/var/spool/slurm:/var/spool/slurm'
-      - './results/e148/var/state/:/var/state'
-  e149: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e149
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.149
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e149:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e149/var/spool/slurm:/var/spool/slurm'
-      - './results/e149/var/state/:/var/state'
-  e150: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e150
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.150
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e150:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e150/var/spool/slurm:/var/spool/slurm'
-      - './results/e150/var/state/:/var/state'
-  e151: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e151
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.151
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e151:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e151/var/spool/slurm:/var/spool/slurm'
-      - './results/e151/var/state/:/var/state'
-  e152: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e152
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.152
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e152:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e152/var/spool/slurm:/var/spool/slurm'
-      - './results/e152/var/state/:/var/state'
-  e153: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e153
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.153
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e153:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e153/var/spool/slurm:/var/spool/slurm'
-      - './results/e153/var/state/:/var/state'
-  e154: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e154
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.154
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e154:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e154/var/spool/slurm:/var/spool/slurm'
-      - './results/e154/var/state/:/var/state'
-  e155: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e155
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.155
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e155:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e155/var/spool/slurm:/var/spool/slurm'
-      - './results/e155/var/state/:/var/state'
-  e156: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e156
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.156
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e156:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e156/var/spool/slurm:/var/spool/slurm'
-      - './results/e156/var/state/:/var/state'
-  e157: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e157
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.157
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e157:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e157/var/spool/slurm:/var/spool/slurm'
-      - './results/e157/var/state/:/var/state'
-  e158: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e158
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.158
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e158:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e158/var/spool/slurm:/var/spool/slurm'
-      - './results/e158/var/state/:/var/state'
-  e159: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e159
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.159
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e159:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e159/var/spool/slurm:/var/spool/slurm'
-      - './results/e159/var/state/:/var/state'
-  e160: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e160
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.160
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e160:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e160/var/spool/slurm:/var/spool/slurm'
-      - './results/e160/var/state/:/var/state'
-  e161: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e161
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.161
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e161:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e161/var/spool/slurm:/var/spool/slurm'
-      - './results/e161/var/state/:/var/state'
-  e162: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e162
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.162
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e162:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e162/var/spool/slurm:/var/spool/slurm'
-      - './results/e162/var/state/:/var/state'
-  e163: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e163
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.163
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e163:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e163/var/spool/slurm:/var/spool/slurm'
-      - './results/e163/var/state/:/var/state'
-  e164: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e164
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.164
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e164:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e164/var/spool/slurm:/var/spool/slurm'
-      - './results/e164/var/state/:/var/state'
-  e165: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e165
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.165
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e165:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e165/var/spool/slurm:/var/spool/slurm'
-      - './results/e165/var/state/:/var/state'
-  e166: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e166
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.166
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e166:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e166/var/spool/slurm:/var/spool/slurm'
-      - './results/e166/var/state/:/var/state'
-  e167: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e167
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.167
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e167:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e167/var/spool/slurm:/var/spool/slurm'
-      - './results/e167/var/state/:/var/state'
-  e168: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e168
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.168
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e168:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e168/var/spool/slurm:/var/spool/slurm'
-      - './results/e168/var/state/:/var/state'
-  e169: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e169
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.169
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e169:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e169/var/spool/slurm:/var/spool/slurm'
-      - './results/e169/var/state/:/var/state'
-  e170: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e170
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.170
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e170:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e170/var/spool/slurm:/var/spool/slurm'
-      - './results/e170/var/state/:/var/state'
-  e171: 
-    image: carc/slurm_vc:slurm-20.02-sim
-    hostname: e171
-    shm_size: 64M
-    command: ["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]
-    networks: 
-      network1:  
-        ipv4_address: 172.32.3.171
-    expose: 
-      - '6817'
-      - '6818'
-      - '6819'
-    volumes: 
-      - './results/e171:/root/results'
-      - './etc:/opt/slurm/etc'
-      - './results/home:/home'
-      - './results/e171/var/spool/slurm:/var/spool/slurm'
-      - './results/e171/var/state/:/var/state'
+#      - './results/e78/var/spool/slurm:/var/spool/slurm'
+#      - './results/e78/var/state/:/var/state'
 
 networks: 
   network1: 

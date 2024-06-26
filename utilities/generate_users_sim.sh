@@ -1,7 +1,7 @@
 #!/bin/bash
 
 event_file="slurm_anon_epyc64_10days"
-awk 'BEGIN {FS="|"} NR>1 {print $1,$9}' $event_file | sort | uniq | less > tmp
+awk 'BEGIN {FS="|"} NR>1 {print $1,$10}' $event_file | sort | uniq | less > tmp
 
 awk '{sub(/user/,"",$1);  \
     sub(/account/,"",$2);  \

@@ -16,12 +16,14 @@ func time_diff(end_string,start_string){
 }
 
 BEGIN {FS="|"; last_job_submit="2023 10 01 00 00 00"; jobcounter="1"}
-NR > 1 { submit_time=slurm_time_convert($3)
+NR > 1 { scale=60
+		submit_time=slurm_time_convert($3)
         submit_diff=time_diff(submit_time,last_job_submit)
-        job_start_time=slurm_time_convert($4)
-        job_end_time=slurm_time_convert($5)
-        job_duration=time_diff(job_end_time,job_start_time) # time in seconds
-        printf("-dt %s -e submit_batch_job | --uid=%s  -sim-walltime %s ",submit_diff,$1,job_duration) 
-        printf("-t %s -n %s -N %s -A %s -p %s -q %s --mem=%s pseudo.job\n",$6,$7,$8,$9,$10,$11,$12)
+        job_duration=$7 # time in minutes
+		#dt=(10.25+0.25*jobcounter)/scale
+		dt=submit_diff/scale
+        printf("-dt %.2f -e submit_batch_job | --uid=%s  -sim-walltime %d ",dt,$1,job_duration/scale) 
+        printf("-J JOB_%s -t %d -n %s -N %s -A %s -p %s -q %s --mem=%s pseudo.job\n",jobcounter,$6/scale,$8,$9,$10,$11,$12,$13)
         last_job_submit=submit_time
+		jobcounter =jobcounter+1
         }

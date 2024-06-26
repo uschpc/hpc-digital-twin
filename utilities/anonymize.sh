@@ -11,7 +11,7 @@ echo "getting usernames"
 usernames=$(awk 'BEGIN {FS="|"} NR>1 {print$1}' $log_file | sort | uniq)
 
 echo "getting account names"
-accounts==$(awk 'BEGIN {FS="|"} NR>1 {print$9}' $log_file | sort | uniq)
+accounts==$(awk 'BEGIN {FS="|"} NR>1 {print$10}' $log_file | sort | uniq)
 
 
 n_usernames=$(echo $usernames | wc -w)
