@@ -1,8 +1,10 @@
 #!/bin/bash
 
-log_file="slurm_sacct_epyc64_10days"
-anon_file="slurm_anon_epyc64_10days"
+#log_file="slurm_sacct_epyc64_10days"
+#anon_file="slurm_anon_epyc64_10days"
 
+log_file=$1
+anon_file=$2
 echo "copying log file"
 cp $log_file $anon_file
 

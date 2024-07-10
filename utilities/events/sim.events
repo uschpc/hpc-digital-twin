@@ -1,9 +1,0 @@
--dt 0.17 -e submit_batch_job | --uid=user68  -sim-walltime 361 -J jobid_1 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.18 -e submit_batch_job | --uid=user68  -sim-walltime 358 -J jobid_2 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.18 -e submit_batch_job | --uid=user68  -sim-walltime 359 -J jobid_3 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.19 -e submit_batch_job | --uid=user68  -sim-walltime 352 -J jobid_4 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.19 -e submit_batch_job | --uid=user68  -sim-walltime 363 -J jobid_5 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.20 -e submit_batch_job | --uid=user68  -sim-walltime 361 -J jobid_6 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.20 -e submit_batch_job | --uid=user68  -sim-walltime 357 -J jobid_7 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.20 -e submit_batch_job | --uid=user68  -sim-walltime 353 -J jobid_8 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
--dt 0.21 -e submit_batch_job | --uid=user68  -sim-walltime 355 -J jobid_9 -t 24 -n 5 -N 1 -A account62 -p epyc-64 -q normal --mem=25G pseudo.job
