@@ -6,11 +6,11 @@ N_COMPUTE_NODES?=171
 INSTALL_PREFIX?=./output
 
 
+	
+all :tmp_dir tmp_dir/sacctmgr.script tmp_dir/users.sim $(ANON_JOB_DATA)  $(EVENTS_FILE) tmp_dir/docker-compose.yml
+
 tmp_dir:
 	mkdir tmp_dir
-	
-all :tmp_dir/sacctmgr.script tmp_dir/users.sim $(ANON_JOB_DATA)  $(EVENTS_FILE) tmp_dir/docker-compose.yml
-
 
 tmp_dir/sacctmgr.script: $(EVENTS_FILE) tmp_dir/users.sim
 	./scripts/sacctmgr_script_maker.awk tmp_dir/users.sim > tmp_dir/sacctmgr.script
