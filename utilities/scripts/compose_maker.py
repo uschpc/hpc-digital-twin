@@ -1,6 +1,8 @@
+import argparse
+
+
+
 outfile="docker-compose.yml"
-n_compute=78
-image_name="carc/slurm_vc:slurm-20.02-sim"
 
 preamble="""version: "3.3"\nservices: \n"""
 head_node_command='["sshd", "munged", "mysqld", "-loop"]'
@@ -35,22 +37,23 @@ networks:
           gateway: 172.32.3.1
 """
 
+parser = argparse.ArgumentParser(description='Generate docker-compose.yml file for Slurm simulator')
+parser.add_argument('-n','--nodes',nargs='?',default=171,type=int,help='Number of nodes in simulated cluster')
+parser.add_argument('--image_name','-i',nargs='?',default='carc/slurm_vc:slurm-20.02-sim',type=str,help='Which docker container to use')
+args=parser.parse_args()
+
 with open(outfile,'w') as f:
 
 	hostname='headnode'
-	ip_address='172.32.3.172'
+	ip_address=f'172.32.3.{args.nodes+1}'
 	command=head_node_command
 
 
 
 	f.write(preamble)
-	for i in range(1,n_compute+2):
-	#for i in range(1,3):
-		f.write(node_string.format(hostname=hostname,command=command,ip_address=ip_address,image_name=image_name))
+	for i in range(1,args.nodes+2):
+		f.write(node_string.format(hostname=hostname,command=command,ip_address=ip_address,image_name=args.image_name))
 		hostname=f'e{i}'
 		command=compute_node_command
-		if i==1:
-			ip_address=f'172.32.3.{n_compute+1}'
-		else:
-			ip_address=f'172.32.3.{i}'
+		ip_address=f'172.32.3.{i}'
 	f.write(networkstring)

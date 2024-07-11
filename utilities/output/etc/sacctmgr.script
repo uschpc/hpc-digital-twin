@@ -1,0 +1,10 @@
+# add/modify QOS 
+modify QOS set normal Priority=0 
+add QOS Name=supporters Priority=100 
+
+# add cluster 
+
+add cluster Name=micro Fairshare=1 QOS=normal,supporters
+
+add user name=admin DefaultAccount=account0 MaxSubmitJobs=1000 AdminLevel=Administrator
+

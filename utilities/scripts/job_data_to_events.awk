@@ -19,7 +19,7 @@ BEGIN {FS="|"; jobcounter="1"}
 
 NR ==2 {last_job_submit=slurm_time_convert($3)}
 
-NR >= 2 { scale=1
+NR >= 2 { scale=2
 		submit_time=slurm_time_convert($3)
         submit_diff=time_diff(submit_time,last_job_submit)
         job_duration=$7 # time in minutes
