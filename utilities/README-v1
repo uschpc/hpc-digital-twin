@@ -22,13 +22,15 @@ cd utilities
 # copy the slurm job history data and store it inside input folder
 cp ~/slurm_sacct_epyc64_10days input
 
+Step 4: Preprocessing input data to virtual cluster & initial setups before running the virtual cluster
+
 #Anonymize the slurm job history data 
 ./scripts/anonymize.sh input/slurm_sacct_epyc64_10days input/slurm_anon_epyc64_10days
 
 # format the anonymized job log data into "events" style format, You should then have an event file
 ./scripts/job_data_to_events.awk input/slurm_anon_epyc64_10days > events/sim.events
 
-# run `generate_users_sim.sh`. Creates associations of users and accounts based on initial sacct data. This will generate a file named 'user.sim'. 
+# run `generate_users_sim.sh`. Creates associations of users and accounts based on initial sacct job history data 'sim.events'. This will generate a file named 'user.sim'. 
 ./scripts/generate_users_sim.sh events/sim.events .
 
 # Generate sacctmgr.script for future processing usage: "Add slurm accounts"
