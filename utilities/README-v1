@@ -17,9 +17,6 @@ cd slurm_model
 git clone https://github.com/uschpc/hpc-digital-twin.git
 cd hpc-gital-twin
 cd utilities
-cd scripts
-cd ..
-ls
 cp ~/slurm_sacct_epyc64_10days input
 
 #Anonymize the slurm job history data 
