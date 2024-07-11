@@ -1,0 +1,41 @@
+
+Step 1 
+Login to discovery and run the following command (save stdout to "slurm_sacct_epyc64_10days" for example): 
+
+sacct --starttime 03/18/24 --endtime 03/28/24 --format=User,JobID,Submit,Start,End,TimelimitRaw,ElapsedRaw,ReqCPUS,ReqNodes,Account%15,Partition,QOS,ReqMem,ReqTRES -X -P -a -r epyc-64 > ~/slurm_sacct_epyc64_10days
+
+Step 2: After Creating a VM on Artemis 
+VM Image: Ubuntu 22.04 VM 
+Storage changed to 40GB,  others leave as default 
+
+Step 3
+cd /scratchlocal
+mkdir tutorial
+cd tutorial
+mkdir slurm_model
+cd slurm_model
+git clone https://github.com/uschpc/hpc-digital-twin.git
+cd hpc-gital-twin
+cd utilities
+cd scripts
+cd ..
+ls
+cp ~/slurm_sacct_epyc64_10days input
+
+#Anonymize the slurm job history data 
+./scripts/anonymize.sh input/slurm_sacct_epyc64_10days input/slurm_anon_epyc64_10days
+
+# format the anonymized job log data into "events" style format, You should then have an event file
+./scripts/job_data_to_events.awk input/slurm_anon_epyc64_10days > events/sim.events
+
+# run `generate_users_sim.sh`. Creates associations of users and accounts based on initial sacct data. This will generate a file named 'user.sim'. 
+./scripts/generate_users_sim.sh events/sim.events .
+
+# Generate sacctmgr.script for future processing usage: "Add slurm accounts"
+./sacctmgr_script_maker.awk users.sim > sacctmgr.script
+
+TO DO:
+# Adding users to virtual slurm cluster, this needs to be done on the headnode 
+./add_system_users.sh
+
+
