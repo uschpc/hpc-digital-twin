@@ -4,11 +4,11 @@ import argparse
 
 outfile="docker-compose.yml"
 
-preamble="""version: "3.3"\nservices: \n"""
+preamble="""services: \n"""
 head_node_command='["sshd", "munged", "mysqld", "-loop"]'
 compute_node_command='["sshd", "munged", "/opt/cluster/micro2/utils/start_compute_node.sh", "-loop"]'
 node_string="""  {hostname}: 
-    image: {image_name}
+    image: docker.io/{image_name}
     hostname: {hostname}
     shm_size: 64M
     command: {command}

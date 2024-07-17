@@ -19,4 +19,4 @@ do
 	echo "${username}:user" | chpasswd
 	useradd ${USERADD_FLAG} -u $uid -s /bin/bash ${username}
 done
-useradd ${USERADD_FLAG} -u nikolays -s /bin/bash ${username}
+#useradd ${USERADD_FLAG} nikolays -s /bin/bash ${username}

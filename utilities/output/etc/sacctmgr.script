@@ -8,3 +8,18 @@ add cluster Name=micro Fairshare=1 QOS=normal,supporters
 
 add user name=admin DefaultAccount=account0 MaxSubmitJobs=1000 AdminLevel=Administrator
 
+
+add account name=account75 Fairshare=100
+add user name=user119 DefaultAccount=account75 MaxSubmitJobs=1000
+
+add account name=account71 Fairshare=100
+add user name=user24 DefaultAccount=account71 MaxSubmitJobs=1000
+
+add account name=account62 Fairshare=100
+add user name=user68 DefaultAccount=account62 MaxSubmitJobs=1000
+
+add account name=account24 Fairshare=100
+add user name=user78 DefaultAccount=account24 MaxSubmitJobs=1000
+
+modify user set qoslevel="normal,supporters"
+list associations format=Account,Cluster,User,Fairshare tree withd
