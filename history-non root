@@ -5,6 +5,7 @@
   556  ls
   557  cd utilities/
   558  ls
+ADDED: mkdir events (otherwise it will report an error)
   559  make
   560  cd ..
   561  ls
