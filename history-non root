@@ -1,0 +1,25 @@
+  552  cd hpc-digital-twin/
+  553  ls
+  554  clear
+  555  git pull
+  556  ls
+  557  cd utilities/
+  558  ls
+  559  make
+  560  cd ..
+  561  ls
+  562  cd utilities/
+  563  ls tmp_dir/
+  564  ls events/
+  565  cd /scratchlocal/tutorial/slurm_model
+  566  mkdir epyc
+  567  cd hpc-digital-twin/utilities/
+  568  ls
+  569  less Makefile 
+  570  export INSTALL_PREFIX=/scratchlocal/tutorial/slurm_model/epyc
+  571  make install
+  572  make dockerfile
+  573  git pull
+  574  make dockerfile
+  575  make dockerimage
+  576  sudo su
