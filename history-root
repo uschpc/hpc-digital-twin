@@ -42,3 +42,10 @@
   113  ls
   114  make dockerfile
   115  make dockerimage
+docker compose up -d
+  124  nano launcher.sh
+  125  ls
+  126  less docker-compose.yml 
+  127* [Anano docker-compose.yml 
+  128  docker compose up -d
+  129  history
