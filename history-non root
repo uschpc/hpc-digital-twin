@@ -23,3 +23,10 @@
   574  make dockerfile
   575  make dockerimage
   576  sudo su
+  492 cd /scratchlocal/tutorial/
+  493  ls
+  494  cd slurm_model/
+  495  ls
+  496  cd epyc
+  497  ls
+  498  docker compose up -d
