@@ -13,7 +13,8 @@ all :tmp_dir tmp_dir/sacctmgr.script tmp_dir/users.sim $(ANON_JOB_DATA)  $(EVENT
 
 tmp_dir:
 	mkdir tmp_dir
-
+events:
+	mkdir events
 $(DOCKERFILE_DIR)/user_adds:
 	mkdir -p $(DOCKERFILE_DIR)/user_adds
 
@@ -24,7 +25,7 @@ tmp_dir/users.sim: $(EVENTS_FILE) tmp_dir
 
 $(ANON_JOB_DATA): $(RAW_JOB_DATA)
 	./scripts/anonymize.sh $(RAW_JOB_DATA) $(ANON_JOB_DATA)
-$(EVENTS_FILE): $(ANON_JOB_DATA)
+$(EVENTS_FILE): events $(ANON_JOB_DATA)
 	#./scripts/job_data_to_events.awk $(ANON_JOB_DATA) > $(EVENTS_FILE)
 	head -n 10 $(ANON_JOB_DATA) | ./scripts/job_data_to_events.awk  > $(EVENTS_FILE)
 
