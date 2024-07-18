@@ -24,6 +24,11 @@ ADDED: mkdir events (otherwise it will report an error)
   574  make dockerfile
   575  make dockerimage
   576  sudo su
+
+
+
+
+
   492 cd /scratchlocal/tutorial/
   493  ls
   494  cd slurm_model/
