@@ -1,7 +1,7 @@
 RAW_JOB_DATA?=input/slurm_sacct_epyc64_10days
 ANON_JOB_DATA?=input/slurm_anon_epyc64_10days
 EVENTS_FILE?=events/epyc64_10days.events
-DOCKER_IMAGE_NAME?=carc/slurm_vc:slurm-21-08-sim
+DOCKER_IMAGE_NAME?=carc/slurm_vc:slurm-23-02-sim
 N_COMPUTE_NODES?=171
 INSTALL_PREFIX?=./output
 DOCKERFILE_DIR?=/scratchlocal/slurm_model
