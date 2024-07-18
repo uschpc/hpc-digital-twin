@@ -86,7 +86,7 @@ RUN cd /usr/local/miniapps && make
 WORKDIR /root
 
 # install slurm
-RUN git clone --depth 1   --branch slurm-21-08-sim https://github.com/ubccr-slurm-simulator/slurm_simulator.git && \
+RUN git clone --depth 1   --branch slurm-23-02-sim https://github.com/CeSul/slurm_simulator.git && \
     cd ~/slurm_simulator && mkdir bld_frontend && cd bld_frontend && \
     ~/slurm_simulator/configure --prefix=/opt/slurm --with-munge \
     --disable-x11 --disable-front-end --with-hdf5=no   --enable-debug && \
