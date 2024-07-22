@@ -33,7 +33,8 @@ Sudo su
 
 Step 4: 
 # now you are in the root user of Ubuntu VM
-4.1 Install DOcker within VM
+
+4.1 Install Docker within VM
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -48,7 +49,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sudo docker run hello-world
 
-4.2 
+4.2 Clone the ubccr github repo
 cd /scratchlocal/
 rm -rf slurm_model
 git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
@@ -57,5 +58,18 @@ cd slurm_model/
 mv .dockerignore .dockerignore_bkp-1
 systemctl start docker
 docker pull centos:7
+
+4.3 Make docker image (This would take 5-10 mints or so) 
+cd /scratchlocal/tutorial/slurm_model/hpc-digital-twin/utilities
+make dockerimage
+
+4.4 Edit docker compose file 
+cd /scratchlocal/tutorial/slurm_model/epyc
+
+#Edit docker-compose.yml, change e1 ipv4_address from 172.32.3.1 to 172.32.3.173
+nano docker-compose.yml
+
+docker compose up -d 
+
 
 
