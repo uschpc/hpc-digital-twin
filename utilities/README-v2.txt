@@ -21,24 +21,41 @@ cd utilities
 
 # copy the slurm job history data and store it inside input folder
 cp ~/slurm_sacct_epyc64_10days input
+make
+cd /scratchlocal/tutorial/slurm_model
+mkdir epyc
+cd hpc-digital-twin/utilities/
+export INSTALL_PREFIX=/scratchlocal/tutorial/slurm_model/epyc
+make install
+make dockerfile
+Sudo su
 
-Step 4: Preprocessing input data to virtual cluster & initial setups before running the virtual cluster
 
-#Anonymize the slurm job history data 
-./scripts/anonymize.sh input/slurm_sacct_epyc64_10days input/slurm_anon_epyc64_10days
+Step 4: 
+# now you are in the root user of Ubuntu VM
+4.1 Install DOcker within VM
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 
-# format the anonymized job log data into "events" style format, You should then have an event file
-mkdir events
-./scripts/job_data_to_events.awk input/slurm_anon_epyc64_10days > events/sim.events
+#the foloowing line will ask you to choose yes or no,  choose yes
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# run `generate_users_sim.sh`. Creates associations of users and accounts based on initial sacct job history data 'sim.events'. This will generate a file named 'user.sim'. 
-./scripts/generate_users_sim.sh events/sim.events .
+sudo docker run hello-world
 
-# Generate sacctmgr.script for future processing usage: "Add slurm accounts"
-./sacctmgr_script_maker.awk users.sim > sacctmgr.script
-
-TO DO:
-# Adding users to virtual slurm cluster, this needs to be done on the headnode 
-./add_system_users.sh
+4.2 
+cd /scratchlocal/
+rm -rf slurm_model
+git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+export INSTALL_PREFIX=/scratchlocal/slurm_model/epyc
+cd slurm_model/
+mv .dockerignore .dockerignore_bkp-1
+systemctl start docker
+docker pull centos:7
 
 
