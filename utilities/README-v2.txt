@@ -16,7 +16,7 @@ cd tutorial
 mkdir slurm_model
 cd slurm_model
 git clone https://github.com/uschpc/hpc-digital-twin.git
-cd hpc-gital-twin
+cd hpc-digital-twin
 cd utilities
 
 # copy the slurm job history data and store it inside input folder
