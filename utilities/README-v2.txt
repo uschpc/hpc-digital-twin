@@ -28,7 +28,7 @@ cd hpc-digital-twin/utilities/
 export INSTALL_PREFIX=/scratchlocal/tutorial/slurm_model/epyc
 make install
 make dockerfile
-Sudo su
+sudo su
 
 
 Step 4: 
