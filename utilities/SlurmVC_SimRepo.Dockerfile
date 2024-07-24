@@ -34,11 +34,6 @@ RUN echo 'root:root' |chpasswd && \
     #useradd -m -s /bin/bash user5 && echo 'user5:user' |chpasswd
 	groupadd user
 
-RUN mkdir /root/user_adds
-COPY ./user_adds/users.sim ./user_adds/add_system_users.sh /root/user_adds
-
-RUN cd /root/user_adds && ./add_system_users.sh
-
 # copy daemons starters
 COPY ./docker/utils/cmd_setup ./docker/utils/cmd_start ./docker/utils/cmd_stop /usr/local/sbin/
 
