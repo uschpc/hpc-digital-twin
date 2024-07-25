@@ -69,7 +69,26 @@ cd /scratchlocal/tutorial/slurm_model/epyc
 #Edit docker-compose.yml, change e1 ipv4_address from 172.32.3.1 to 172.32.3.173
 nano docker-compose.yml
 
-docker compose up -d 
+#docker compose up -d 
+
+4.5 
+cp -r /scratchlocal/tutorial/slurm_model/hpc-digital-twin/sim_configs/etc/ /scratchlocal/tutorial/slurm_model/epyc/
+
+4.6
+cd /scratchlocal/slurm_model/micro2/utils
+
+# Edit start_compute_node.sh and start_head_node.sh and comment out this line: export SLURM_CONF=/opt/cluster/micro2/etc/slurm.conf
+nano start_compute_node.sh 
+nano start_head_node.sh 
+
+docker container prune
+cd /scratchlocal/tutorial/slurm_model/hpc-digital-twin/utilities/
+export INSTALL_PREFIX=/scratchlocal/tutorial/slurm_model/epyc
+make dockerfile
+make dockerimage
+cd /scratchlocal/tutorial/slurm_model/epyc/
+docker compose up headnode -d
+
 
 
 
