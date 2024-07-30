@@ -71,10 +71,10 @@ nano docker-compose.yml
 
 #docker compose up -d 
 
-4.5 
+4.5 Copy config settings to the slurm epyc folder 
 cp -r /scratchlocal/tutorial/slurm_model/hpc-digital-twin/sim_configs/etc/ /scratchlocal/tutorial/slurm_model/epyc/
 
-4.6
+4.6 Change some compute node and head node settings
 cd /scratchlocal/slurm_model/micro2/utils
 
 # Edit start_compute_node.sh and start_head_node.sh and comment out this line: export SLURM_CONF=/opt/cluster/micro2/etc/slurm.conf
