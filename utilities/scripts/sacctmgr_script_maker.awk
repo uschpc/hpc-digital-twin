@@ -5,7 +5,9 @@ print("# add/modify QOS ")
 print("modify QOS set normal Priority=0 ")
 print("add QOS Name=supporters Priority=100 \n")
 print("# add cluster \n")
-print("add cluster Name=micro Fairshare=1 QOS=normal,supporters\n")
+print("add cluster Name=micro Fairshare=1 \n")
+#print("add cluster Name=micro Fairshare=1 QOS=normal,supporters\n")
+print("add account name=account0 Fairshare=100\n")
 print("add user name=admin DefaultAccount=account0 MaxSubmitJobs=1000 AdminLevel=Administrator\n")
 #account_list=[]
 }

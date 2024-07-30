@@ -17,7 +17,7 @@ RUN yum -y update && \
         readline readline-devel strace \
         hdf5 hdf5-devel pam-devel hwloc hwloc-devel \
         perl perl-ExtUtils-MakeMaker python3 python36-PyMySQL python36-psutil \
-        sudo perl-Date* && \
+        sudo perl-Date* dbus dbus-devel && \
     pip3 install pandas py-cpuinfo
 
 
