@@ -87,8 +87,33 @@ export INSTALL_PREFIX=/scratchlocal/tutorial/slurm_model/epyc
 make dockerfile
 make dockerimage
 cd /scratchlocal/tutorial/slurm_model/epyc/
-docker compose up headnode -d
+docker compose up -d
 
+# 
+docker exec -it epyc-headnode-1 bash
+
+# add system users
+
+cd /opt/slurm/etc
+./add_system_users.sh
+
+# set slurmdbd.conf permissions
+
+chmod 600 /opt/slurm/etc/slurmdbd.conf
+chown slurm:slurm /opt/slurm/etcs/slurmdbd.conf
+
+
+# leave headnode container
+
+#to start simulated workload
+
+docker exec -it epyc-headnode-1 /opt/slurm_sim_tools/src/slurmsimtools/run_slurm.py \
+-s /opt/slurm \
+-e /opt/slurm/etc/ \
+-a /opt/slurm/etc/sacctmgr.script \
+-t /opt/slurm/etc/epyc64_10days.events \
+-r /root/results/test/epyc_dtstart_30 \
+-d -v -dtstart 30 --no-slurmd
 
 
 
