@@ -49,9 +49,15 @@ RUN mkdir /var/run/sshd && \
 # setup munge
 RUN echo "secret munge key secret munge key secret munge key" >/etc/munge/munge.key &&\
 #RUN create-munge-key  \
+	mkdir -p /var/log/munge /run/munge /var/lib/munge /etc/munge &&\
     chown -R munge:munge /var/log/munge /run/munge /var/lib/munge /etc/munge &&\
-    chmod 400 /etc/munge/munge.key &&\
-    cmd_start munged &&\
+    chmod 400 /etc/munge/munge.key
+VOLUME /var/log/munge
+USER munge
+RUN touch /var/log/munge/munged.log
+USER root
+
+RUN    cmd_start munged &&\
     munge -n | unmunge &&\
     cmd_stop munged
 

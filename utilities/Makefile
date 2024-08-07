@@ -6,6 +6,7 @@ N_COMPUTE_NODES?=78
 INSTALL_PREFIX?=./output
 DOCKERFILE_DIR?=/scratchlocal/slurm_model
 DOCKERFILE?=SlurmVC_SimRepo.Dockerfile
+TMP_LOGS?=/scratch1/$(USER)/slurm_simulator/logs
 
 	
 all :tmp_dir tmp_dir/sacctmgr.script tmp_dir/users.sim $(ANON_JOB_DATA)  $(EVENTS_FILE) tmp_dir/docker-compose.yml
@@ -27,12 +28,13 @@ $(EVENTS_FILE): events $(ANON_JOB_DATA)
 	#head -n 10 $(ANON_JOB_DATA) | ./scripts/job_data_to_events.awk  > $(EVENTS_FILE)
 
 tmp_dir/docker-compose.yml:
-	python3 ./scripts/compose_maker.py --image_name $(DOCKER_IMAGE_NAME) --nodes $(N_COMPUTE_NODES) --docker_file=$(DOCKERFILE)
+	python3 ./scripts/compose_maker.py --image_name $(DOCKER_IMAGE_NAME) --nodes $(N_COMPUTE_NODES) --tmp_logs $(TMP_LOGS) --docker_file=$(DOCKERFILE)
 	mv docker-compose.yml tmp_dir
 .PHONY: dockerimage
 dockerimage: $(DOCKERFILE_DIR)/$(DOCKERFILE) 
 	cd $(DOCKERFILE_DIR) && \
-	docker build -f $(DOCKERFILE) -t $(DOCKER_IMAGE_NAME) .
+	docker build  --no-cache -f $(DOCKERFILE) -t $(DOCKER_IMAGE_NAME) .
+	#docker build  -f $(DOCKERFILE) -t $(DOCKER_IMAGE_NAME) .
 
 .PHONY: dockerfile
 dockerfile $(DOCKERFILE_DIR)/$(DOCKERFILE) :
