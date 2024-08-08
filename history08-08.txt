@@ -1,0 +1,107 @@
+  500  dockerd-rootless-setuptoolsh install
+  501  dockerd-rootless-setuptool.sh install
+  502  echo "haoji:100000:65536" >> /etc/subuid
+  503  sudo su
+  504  dockerd-rootless-setuptool.sh install
+  505  sudo su
+  506  echo {  "data-root": "/scratchlocal/images"  } >> ~/.config/docker
+  507  echo {  "data-root": "/scratchlocal/images"  } >> ~/.config/docker/daemon.json 
+  508  sudo su
+  509  docker run hello-world
+  510  cd /scratchlocal/
+  511  mkdir tutorial
+  512  cd tutorial/
+  513  mkdir slurm_model/
+  514  cd slurm_model/
+  515  ls
+  516  git pull
+  517  cd hpc-digital-twin/
+  518  git pull
+  519  cd ..
+  520  cd ..
+  521  cd ..
+  522  ls
+  523  mkdir tutorial2
+  524  cd tutorial2
+  525  mkdir slurm_model
+  526  cd slurm_model/
+  527  git clone https://github.com/uschpc/hpc-digital-twin.git
+  528  cd hpc-digital-twin/
+  529  cd utilities/
+  530  cp ~/slurm_sacct_epyc64_10days input
+  531  make
+  532  cd /scratchlocal/tutorial/slurm_model
+  533  cd /scratchlocal/tutorial2/slurm_model/
+  534  mkdir epyc
+  535  cd hpc-digital-twin/utilities/
+  536  export INSTALL_PREFIX=/scratchlocal/tutorial2/slurm_model/epyc
+  537  make install
+  538  make dockerfile
+  539  ls /scratchlocal/slurm_model
+  540  ls -alh
+  541  cd /scratchlocal/tutorial2/
+  542  ls
+  543  rm -rf slurm_model/
+  544  ls
+  545  git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
+  546  echo $INSTALL_PREFIX
+  547  mkdir slurm_model/epyc
+  548  cd /scratchlocal/tutorial/slurm_model/hpc-digital-twin/utilities/
+  549  ls 
+  550  make install
+  551  make dockerfile
+  552  git pull
+  553  cd /scratchlocal/tutorial2/slurm_model/hpc-digital-twin/utilities/
+  554  cd ..
+  555  cd ..
+  556  ls
+  557  cd hpc-digital-twin/
+  558  git pull
+  559  /scratchlocal/tutorial2
+  560  cd /scratchlocal/tutorial2
+  561  ls
+  562  cd slurm_model/
+  563  cd ..
+  564  git clone https://github.com/uschpc/hpc-digital-twin.git
+  565  cd hpc-digital-twin/utilities/
+  566  ls
+  567  make install
+  568  make
+  569  cp ~/slurm_sacct_epyc64_10days input
+  570  cd /scratchlocal/tutorial2/slurm_model
+  571  mkdir epyc
+  572  cd hpc-digital-twin/utilities/
+  573  make install
+  574  cd ..
+  575  ls
+  576  cd hpc-digital-twin/
+  577  ls
+  578  cd utilities/
+  579  make install
+  580  make dockerfile
+  581  cp SlurmVC_SimRepo.Dockerfile /scratchlocal/tutorial2/slurm_model/
+  582  cd /scratchlocal/tutorial2/slurm_model/
+  583  ls
+  584  cd /scratchlocal/tutorial2/hpc-digital-twin
+  585  ls
+  586  cat README.md 
+  587  cp -r /scratchlocal/tutorial/slurm_model/hpc-digital-twin/sim_configs/etc/ /scratchlocal/tutorial/slurm_model/epyc/
+  588  cd /scratchlocal/slurm_model/micro2/utils
+  589  cd /scratchlocal/tutorial2/slurm_model/micro2/utils
+  590  ls
+  591  nano start_compute_node.sh 
+  592  nano start_head_node.sh 
+  593  cd ..
+  594  cd ..
+  595  ls
+  596  ls -alh
+  597  nano .dockerignore 
+  598  DOCKER_BUILDKIT=0 docker build  -f SlurmVC_SimRepo.Dockerfile -t carc/slurm_vc:slurm-23-02-sim .
+  599  cd epyc/
+  600  ls
+  601  docker compose up headnode -d
+  602  docker ps
+  603  docker exec -it epyc-headnode-1 bash
+  604  docker compose up -d
+  605  docker exec -it epyc-headnode-1 /opt/slurm_sim_tools/src/slurmsimtools/run_slurm.py -s /opt/slurm -e /opt/slurm/etc/ -a /opt/slurm/etc/sacctmgr.script -t /opt/slurm/etc/epyc64_10days.events -r /root/results/test/epyc_dtstart_30 -d -v -dtstart 30 --no-slurmd
+  606  history
