@@ -1,4 +1,4 @@
-Step 1: 
+### Step 1: 
 Login to discovery and run the following command (save stdout to "slurm_sacct_epyc64_10days" for example): 
 
 ```
@@ -9,13 +9,13 @@ Then delete the first 1 or 2 jobs. If submit time is much earlier than the follo
 
 
 
-Step 2: 
+### Step 2: 
 Crate a Ubuntu VM on Artemis 
 VM Image: Ubuntu 22.04 VM 
 Storage changed to 40GB, RAM 32GB,  others leave as default 
 
 
-Step 3:
+### Step 3:
 
 Install docker
 
@@ -29,11 +29,12 @@ echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docke
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   sudo apt-get update
 
-  #the foloowing line will ask you to choose yes or no,  choose yes
+#the following line will ask you to choose yes or no,  choose yes
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
- ```
-Step 3.1
+```
+
+### Step 3.1
 
 Install docker rootless mode
 
@@ -56,7 +57,7 @@ echo {  "data-root": "/scratchlocal/images"  } >> ~/.config/docker/daemon.json
 docker run hello-world
 ```
 
-Step 4: Clone the ubccr github repo
+### Step 4: Clone the ubccr github repo
 ```
 cd /scratchlocal/
 git clone https://github.com/ubccr-slurm-simulator/slurm_model.git
@@ -68,14 +69,16 @@ cd /scratchlocal/slurm_model/micro2/utils
 
 ```
 
-Edit start_compute_node.sh and start_head_node.sh and comment out this line: export SLURM_CONF=/opt/cluster/micro2/etc/slurm.conf
+Edit `start_compute_node.sh` and `start_head_node.sh` and comment out this line: `export SLURM_CONF=/opt/cluster/micro2/etc/slurm.conf`
 
 ```
 nano start_compute_node.sh 
 nano start_head_node.sh 
+
 ```
 
-Step 5: Set up job data and Virtual cluster
+### Step 5: Set up job data and Virtual cluster
+
 ```
 cd /scratchlocal
 git clone https://github.com/uschpc/hpc-digital-twin.git
@@ -84,6 +87,7 @@ cd utilities
 ```
 
 Copy the slurm job history data and store it inside input folder
+
 ```
 cp ~/slurm_sacct_epyc64_10days input
 export INSTALL_PREFIX=/scratchlocal/slurm_model/epyc
@@ -92,7 +96,9 @@ make install
 
 ```
 
-Step 6: Build Virtual cluster docker container ```
+### Step 6: Build Virtual cluster docker container 
+
+```
 cd /scratchlocal/slurm_model
 
 # Comment out/delete /micro2 line from .dockerignore file
@@ -106,7 +112,7 @@ DOCKER_BUILDKIT=0 docker build  -f SlurmVC_SimRepo.Dockerfile -t carc/slurm_vc:s
 
 
 
-Step 7: Prepare simulation
+### Step 7: Prepare simulation
 You'll have to some configuration on the VC headnode
 
 ```
