@@ -4,7 +4,6 @@ EVENTS_FILE?=events/epyc64_10days.events
 DOCKER_IMAGE_NAME?=carc/slurm_vc:slurm-23-02-sim
 N_COMPUTE_NODES?=78
 INSTALL_PREFIX?=./output
-DOCKERFILE_DIR?=/scratchlocal/slurm_model
 DOCKERFILE?=SlurmVC_SimRepo.Dockerfile
 TMP_LOGS?=/scratch1/$(USER)/slurm_simulator/logs
 
@@ -36,10 +35,6 @@ dockerimage: $(DOCKERFILE_DIR)/$(DOCKERFILE)
 	docker build  --no-cache -f $(DOCKERFILE) -t $(DOCKER_IMAGE_NAME) .
 	#docker build  -f $(DOCKERFILE) -t $(DOCKER_IMAGE_NAME) .
 
-.PHONY: dockerfile
-dockerfile $(DOCKERFILE_DIR)/$(DOCKERFILE) :
-	install -m 0664 $(DOCKERFILE) $(DOCKERFILE_DIR)
-
 .PHONY: install
 install:
 	mkdir -p $(INSTALL_PREFIX)/etc
@@ -47,6 +42,7 @@ install:
 	install -m 0664 tmp_dir/docker-compose.yml $(INSTALL_PREFIX)
 	install -m 0664 tmp_dir/sacctmgr.script tmp_dir/users.sim $(EVENTS_FILE) $(INSTALL_PREFIX)/etc
 	install -m 0775 scripts/add_system_users.sh $(INSTALL_PREFIX)/etc
+	install -m 0664 $(DOCKERFILE) $(INSTALL_PREFIX)/..
 .PHONY: clean
 clean:
 	rm tmp_dir/docker-compose.yml tmp_dir/sacctmgr.script tmp_dir/users.sim $(EVENTS_FILE) $(ANON_JOB_DATA)	
