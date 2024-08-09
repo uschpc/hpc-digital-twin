@@ -19,12 +19,12 @@ BEGIN {FS="|"; jobcounter="1"}
 
 NR ==2 {last_job_submit=slurm_time_convert($3)}
 
-NR >= 2 { scale=2
+NR >= 2 { scale=1
 		submit_time=slurm_time_convert($3)
         submit_diff=time_diff(submit_time,last_job_submit)
         job_duration=$7 # time in minutes
 		#dt=(10.25+0.25*jobcounter)/scale
-		dt=submit_diff/scale+dt
+		dt=submit_diff/scale#+dt
         printf("-dt %.2f -e submit_batch_job | --uid=%s  -sim-walltime %d ",dt,$1,job_duration/scale) 
         printf("-J jobid_%s -t %d -n %s -N %s -A %s -p %s -q %s --mem=%s pseudo.job\n",jobcounter,$6/scale,$8,$9,$10,$11,$12,$13)
         last_job_submit=submit_time
