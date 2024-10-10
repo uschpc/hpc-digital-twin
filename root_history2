@@ -1,7 +1,0 @@
- 97  cd /scratchlocal/tutorial/slurm_model/epyc/
-   98  ls
-   99  docker compose up -d
-  100  nano slurm.conf
-  101  nano cgroup.conf 
-  102  docker compose up e1
-  103  history
