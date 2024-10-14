@@ -22,9 +22,8 @@ cd slurm-container
 
 3- Get the `slurm-22.05.2.tar.gz` from this repository
 ```
-wget https://github.com/uschpc/hpc-digital-twin/blob/main/ETH-way/slurm-22.05.2.tar.gz
 mv slurm-22.05.2 slurm-22.05.2.old
-cp /home1/irahbari/slurm-22.05.2.tar.gz ./
+wget https://raw.githubusercontent.com/uschpc/hpc-digital-twin/refs/heads/main/ETH-way/slurm-22.05.2.tar.gz
 tar -xvf slurm-22.05.2.tar.gz
 ```
 
