@@ -27,8 +27,17 @@ wget https://raw.githubusercontent.com/uschpc/hpc-digital-twin/refs/heads/main/E
 tar -xvf slurm-22.05.2.tar.gz
 ```
 
+nano into the file `Makefile` and on line 17, remove the option: `--progress=tty`. So, it will be:
+
+```
+slurm-*: .PHONY
+	docker build $@ -t $@:latest 
+```
+save and exit.
+
 4- Make and run the docker image
 ```
+sudo su
 make slurm-22.05.2
 docker run --detach --rm -it -e SLURM_NUMNODES=171 slurm-22.05.2
 docker attach **dockerid**
